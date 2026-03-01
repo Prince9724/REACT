@@ -15,7 +15,7 @@ const Counter = () => {
 
   return (
     <>
-    <div className='card'>
+    <div className='total'>
       <p className='count'>total:{count.toFixed(2)}</p>
     </div>
    {/* <div className='counter'>
