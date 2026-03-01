@@ -23,6 +23,7 @@ const TextUtils = () => {
         <div className='mt-3'>
         <p>
           {text}
+          
         </p>
         <p>count: {count}</p>
         <p>word count: {wordcount}</p>
