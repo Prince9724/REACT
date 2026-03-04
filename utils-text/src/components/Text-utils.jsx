@@ -9,6 +9,7 @@ const TextUtils = () => {
     setreadcount(localStorage.getItem("read")?? 0)
   },[])
 
+    //sa
   const [text, settext] = useState("");
   const [count, setcount] = useState(0);
   const [wordcount, setwordcount] = useState(0);
