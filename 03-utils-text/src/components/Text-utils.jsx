@@ -17,8 +17,9 @@ const TextUtils = () => {
   return (
     <>
       <div className='container'>
+        <h2 className='text-center mt-3'>Text Utils</h2>
         <div className="form-floating">
-          <textarea value={text} onChange={(e) => settext(e.target.value)} className="form-control" style={{ height: 200 }} placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+          <textarea value={text} onChange={(e) => settext(e.target.value)} className="form-control mt-5" style={{ height: 200 }} placeholder="Leave a comment here" id="floatingTextarea"></textarea>
           <label htmlFor="floatingTextarea">Enter you text here..</label>
         </div>
         <div>
@@ -38,11 +39,11 @@ const TextUtils = () => {
             const count =(text.split(" ").length.toString())
             setwordcount(count);
             localStorage.setItem("wordcount", count)
-          }} className='btn btn-success   ms-3 mt-3'>Count letters</button>
+          }} className='btn btn-success ms-3 mt-3'>Count Word</button>
           <button onClick={() => {
             setreadcount(((text.split(" ").length * 60) / 180).toFixed(2))
             localStorage.setItem("read", readcount)
-          }} className='btn btn-secondary   ms-3 mt-3'>Reading-time</button>
+          }} className='btn btn-secondary ms-3 mt-3'>Reading-time</button>
           <button onClick={() => {
             settext(" ");
             setcount(0)

@@ -1,0 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ 
+.skill :hover{
+    background-color: aqua;
+    color: white;
+}
