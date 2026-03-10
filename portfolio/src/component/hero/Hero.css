@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* .hero-img{
+
+} */
+.hero{
+    background-color: #212a31;
+    color: white;
+}
+.skill-name{
+     color: rgb(232, 207, 127);
+}

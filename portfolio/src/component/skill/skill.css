@@ -2,8 +2,17 @@
     margin: 0px;
     padding: 0px;
 }
- 
-.skill :hover{
+ .skill{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid rgb(13, 110, 253);
+    align-content: center;
+ }
+.skill:hover{
     background-color: aqua;
     color: white;
+}
+.hero{
+    background-color: #2e3944;
 }
