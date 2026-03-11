@@ -1,5 +1,6 @@
 import React from 'react'
 import "../hero/Hero.css"
+import Profile from '../hero/image/img-1.jpeg'
 const Hero = () => {
     return (
         <>
@@ -8,11 +9,11 @@ const Hero = () => {
                     <div className='d-flex justify-content-around p-3 mb-5'>
 
                         <div className='w-50'>
-                            <div className=' text-center'>
-                                <h2 className='text-start mt-3'>Prince Gond</h2>
+                            <div className='text-center hero-stats'>
+                                <h2 className='hero-name text-start mt-3'>Prince Gond</h2>
                                 <h3 className= 'skill-name text-start m-3'> Full Stack Web Developer</h3>
                             </div>
-                            <p className='font-family: "Inter", sans-serif;'>
+                            <p>
                                 Hi, I'm <b>Prince Gond</b> a passionate  Frontend <b>Web Developer </b>who enjoys creating modern,
                                 responsive, and user-friendly websites. I love turning ideas into beautiful interfaces using
                                 technologies like **HTML, CSS, JavaScript, Bootstrap, and React**. I am constantly learning
@@ -21,7 +22,7 @@ const Hero = () => {
                             </p>
                         </div>
                         <div className='hero-img border border-3 border-primary rounded-circle mt-5' style={{ height: 200, width: 200 }}>
-                            <img className=' rounded-circle ' style={{ height: 196, width: 196 }} src="../hero/assets/img-2.jpeg" alt="" />
+                            <img className=' rounded-circle ' style={{ height: 196, width: 196 }} src={Profile} alt="" />
                         </div>
 
 

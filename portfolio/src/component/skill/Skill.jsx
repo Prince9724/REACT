@@ -5,10 +5,10 @@ import "../skill/skill.css"
 const Skill = () => {
     return (
         <div className='hero container-fluide'>
-            <div className='mt-4 container text-center d-flex flex-column align-items-center'>
-                <h3 className='text-primary'>skill</h3>
-                <div className=' mt-3 d-flex flex-wrap gap-3'>
-                    <div style={{ height: 50, width: 200 }} className='skill-box  border-primary'>
+            <div className='mt-4 container col-10 text-center d-flex flex-column align-items-center'>
+                <h3 className=''>skill</h3>
+                <div className=' mt-3 d-flex justify-content-center flex-wrap gap-3'>
+                    <div style={{ height: 50, width: 200 }} className='skill-box'>
                         <h4 className='skill'>c</h4>
                     </div>
                     <div style={{ height: 50, width: 200 }} className='skill-box '>
@@ -34,7 +34,7 @@ const Skill = () => {
                     </div>
                 </div>
                 <hr className='bg-primary mt-5 w-100' style={{ height: 3 }} />
-
+                 
             </div>
         </div>
     )

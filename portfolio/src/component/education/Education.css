@@ -1,0 +1,50 @@
+
+.education-section{
+    padding: 70px 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+}
+
+.education-title{
+    font-size: 36px;
+    font-weight: 600;
+    color: #2f3f4e;
+    position: relative;
+}
+.education-title::after{
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #4facfe;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.education-card{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.education-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+.education-card h4{
+    font-size: 22px;
+    font-weight: 600;
+    color: #2f3f4e;
+}
+.education-card h6{
+    font-size: 15px;
+    color: #6c757d;
+    line-height: 1.7;
+}
+.education-line{
+    background: linear-gradient(90deg,#4facfe,#00f2fe);
+    height: 3px;
+    border: none;
+    margin-top: 50px;
+}
