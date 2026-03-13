@@ -1,51 +1,86 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import "../contact/Contact.css"
+ 
 const Contact = () => {
+    const [use, setuse]= useState("");
+    const[email, setemail] = useState("");
+    const [massage, setmassage] = useState("");
+    const clear =()=>{
+        setuse("");
+        setemail("");
+        setmassage("");
+        alert("your details is send !!")
+    }
     return (
-        <div className='contact-box container-fluid'>
-            <div className="conatainer mt-5">
-                <h3 className='text-center'>Contact</h3>
-                <div className=' d-flex justify-content-end'>
-                    <div
-                        action="https://formspree.io/f/{FORM_ID}"
-                        className="fs-form w-50 me-5"
-                        target="_top"
-                        method="POST"
-                    >
-                        <div className="fs-field">
-                            <label className="fs-label" htmlFor="name">Your Name</label>
-                            <input className="fs-input" id="name" name="name" required />
-                        </div>
+        <div id='contact' className='contact-box container-fluid p-5'>
 
-                        <div className="fs-field">
-                            <label className="fs-label" htmlFor="email">Email</label>
-                            <input className="fs-input" id="email" name="email" required />
-                            <p className="fs-description">
-                                This will help me respond to your query via an email.
-                            </p>
-                        </div>
+            <h3 className='text-center'>Contact</h3>
+            <div className='container d-flex flex-wrap w-100 justify-content-around mt-5'>
+                <div>
+                    <h1>
+                        Prince Gond
+                    </h1>
+                    <h3>Full stack web developer </h3>
+                    <h4>contact no. 9724672317</h4>
+                    <p><a href="">princegondrw123@gmail.com</a></p>
+                </div>
+                <div className='send-box'>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputEmail1" className="form-label">
+                            Your Name
+                        </label>
 
-                        <div className="fs-field">
-                            <label className="fs-label" htmlFor="message">Message</label>
-                            <textarea
-                                className="fs-textarea"
-                                id="message"
-                                name="message"
-                                required
-                            ></textarea>
-                            <p className="fs-description">
-                                What would you like to discuss?
-                            </p>
-                        </div>
+                        <input
+                            type="text"
+                            className="form-control"
+                            aria-describedby="emailHelp"
+                            placeholder='Your Name'
+                            value={use}
+                            onChange={(e)=>{
+                                setuse(e.target.value)
+                            }}
+                        />
 
-                        <div className="fs-button-group">
-                            <button className="fs-button" type="submit">Submit</button>
+
+                    </div>
+
+                    <div className=" mb-3">
+                        <label htmlFor="exampleInputEmail1" className="form-label">
+                            Email address
+                        </label>
+
+
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="exampleInputPassword1"
+                            placeholder='Your email'
+                            value={email}
+                            onChange={(e)=> setemail(e.target.value)}
+                        />
+                        <div id="emailHelp" className="form-text text-white">
+                            We'll never share your email with anyone else.
                         </div>
                     </div>
-                </div>
 
+                    <div className="mb-3 form-check">
+                        <div class="form-floating">
+                            <textarea className="form-control"
+                            value={massage}
+                            onChange={(e)=> setmassage(e.target.value)}
+                            placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Send massage </label>
+                        </div>
+                    </div>
+
+                    <button type="submit"  onClick={clear} className="btn btn-primary">
+                        Send 
+                    </button>
+                </div>
             </div>
+
+
 
         </div>
     )

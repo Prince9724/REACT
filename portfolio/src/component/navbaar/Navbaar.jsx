@@ -1,23 +1,25 @@
 import React from 'react'
+import "../navbaar/Navbaar.css"
 
 const Navbaar = () => {
     return (
-        <div>
-            <nav class="navbar sticky-top bg-body-tertiary">
-                <div class="container-fluid d-flex  justify-content-around">
-                    <a class="navbar-brand" href="#">Prince Gond</a>
-                    <div className=' d-flex gap-3 justify-content-center'>
-                        <a href="" className='text-decoration-none'>Home</a>
-                        <a href="" className='text-decoration-none'>About</a>
-                        <a href="" className='text-decoration-none'>Education</a>
-                        <a href="" className='text-decoration-none'>Project</a>
-                        <a href="" className='text-decoration-none'>Skill</a>
-                        <a href="" className='text-decoration-none'>Contact</a>
-                    </div>
-                </div>
-            </nav>
+        <nav className="navbar navbar-expand-lg custom-navbar sticky-top">
+            <div className="container d-flex justify-content-between">
 
-        </div>
+                <a className="navbar-brand logo" href="#">
+                    Prince Gond
+                </a>
+
+                <div className="nav-links d-flex gap-4">
+                    <a id='About' href="#home">Home</a>
+                    <a href="#education">Education</a>
+                    <a id='' href="#skill">Skill</a>
+                    <a id='Project' href="#project">Project</a>
+                    <a id='Contact' href="#contact">Contact</a>
+                </div>
+
+            </div>
+        </nav>
     )
 }
 

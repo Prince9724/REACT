@@ -4,9 +4,9 @@ import "../skill/skill.css"
 
 const Skill = () => {
     return (
-        <div className='hero container-fluide'>
+        <div id='skill' className='hero container-fluide'>
             <div className='mt-4 container col-10 text-center d-flex flex-column align-items-center'>
-                <h3 className=''>skill</h3>
+                <h3 className=''>Skill</h3>
                 <div className=' mt-3 d-flex justify-content-center flex-wrap gap-3'>
                     <div style={{ height: 50, width: 200 }} className='skill-box'>
                         <h4 className='skill'>c</h4>

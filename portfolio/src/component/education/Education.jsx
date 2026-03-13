@@ -3,8 +3,8 @@ import "./Education.css"
 
 const Education = () => {
     return (
-        <div className=' education-section container-fluid'>
-            <div className=' container text-center'>
+        <div id='education' className=' education-section container-fluid'>
+            <div  className=' container text-center'>
 
                 <h3 className='education-title'>Education</h3>
 

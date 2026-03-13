@@ -1,4 +1,16 @@
 .project{
     background-color:#2f3f4e;
+    border-radius: 10px;
+}
+.project-box{
+   background-color:#f4f7fb;
+}
+.prj{
+    color: #2f3f4e;
+}
+.project:hover{
+    transform: scale(1.05);
+    transition:transform 0.5s ease;
+    transition: translateY (-10px);
 }
  
