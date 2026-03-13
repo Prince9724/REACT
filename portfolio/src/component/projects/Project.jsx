@@ -61,15 +61,6 @@ const Project = () => {
                             <a href="https://prince9724.github.io/portfolio/" className='btn btn-primary'>Go to </a>
                         </div>
                     </div>
-                     <div className='project col-lg-5 col-md-5 col-12'>
-                        <img className='img-fluid' src="https://thumbs.dreamstime.com/b/job-opportunity-24549521.jpg" alt="" />
-                        <div className='p-3'>
-                            <h4>Job opurtinity UI</h4>
-                            <p> Job opportunities for full-stack web developer to build modern web applications using latest technologies. 💼💻🚀
-                            </p>
-                            <a href="" className='btn btn-primary'>Go to </a>
-                        </div>
-                    </div>
                     <div className='project col-lg-5 col-md-5 col-12'>
                         <img className='img-fluid' src="https://user-images.githubusercontent.com/79099734/189593798-94357cb9-40ec-45e1-a9ae-78c364a0780f.png" alt="" />
                         <div className='p-3'>
