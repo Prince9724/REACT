@@ -24,6 +24,8 @@
     background: white;
     padding: 25px;
     border-radius: 12px;
+border:2px solid rgba(13, 110, 253, 0.941);
+
     margin-top: 25px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     transition: 0.3s;

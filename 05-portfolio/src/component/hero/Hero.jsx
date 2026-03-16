@@ -1,6 +1,6 @@
 import React from 'react'
-import "../hero/Hero.css"
-import Profile from '../hero/image/img-1.jpeg'
+import "./Hero.css"
+import Profile from './image/img-1.jpeg'
 const Hero = () => {
     return (
         <>
@@ -51,7 +51,7 @@ const Hero = () => {
 
 
                     </div>
-                    <div className='d-flex flex-wrap gap-5 justify-content-around w-100 border rounded-2 p-3'>
+                    <div className='d-flex flex-wrap gap-5 justify-content-around w-100 border border-primary border-2 rounded-2 p-3'>
                         <div className='text-center'>
                             <h3>16+</h3>
                             <p>Projects</p>

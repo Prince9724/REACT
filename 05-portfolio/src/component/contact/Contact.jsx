@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import "../contact/Contact.css"
+import "./Contact.css"
  
 const Contact = () => {
     const [use, setuse]= useState("");
