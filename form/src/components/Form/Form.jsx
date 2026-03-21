@@ -8,7 +8,7 @@ const Form = () => {
     const [eye, seteye] = useState(false);
     const handlleSubmite = (e) => {
         e.preventDefault();
-        const paswordResex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        const paswordRejex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
         if (user.email == undefined || user.email == " ") {
             alert("email is requared !!")
@@ -16,7 +16,7 @@ const Form = () => {
         else if (user.name == " " || user.name == undefined) {
             alert("Name is requared !!")
         }
-        else if (!paswordResex.test(user.pasword) || user.pasword == " ") {
+        else if (!paswordRejex.test(user.pasword) || user.pasword == " ") {
             alert(" Pasword is requared !!");
         }
 
@@ -27,7 +27,7 @@ const Form = () => {
             // ki key pr user ki puri information store hai. string form me.  
             navigate("/user")
         }
-
+            
 
 
     }

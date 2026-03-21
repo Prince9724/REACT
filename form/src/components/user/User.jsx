@@ -2,6 +2,9 @@ import React, { use } from 'react'
 import { useState } from 'react'
 const User = () => {
     const [users, setusers] = useState(JSON.parse(localStorage.getItem("users")) || [])
+    const remove =()=>{
+       users.splice(0,1)
+    }
     return (
         <div className='container d-flex flex-wrap justify-content-center gap-3 mt-5'>
 
@@ -13,7 +16,7 @@ const User = () => {
                         <h4 key={i}>  {user.pasword}</h4>
                         <h5 key={i}>{user.contact}</h5>
                         <div>
-                            <button className='btn btn-danger'>delete</button>
+                            <button onClick={remove} className='btn btn-danger'>delete</button>
                         </div>
                     </div>
                      
