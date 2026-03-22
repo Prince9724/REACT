@@ -1,0 +1,42 @@
+.Card{
+  margin-top: 20px;
+  margin-left: 30px;
+  text-align: center;
+   padding:20px; 
+  border: 2px solid #fff ;
+  width: 250px;
+  border-radius: 10px;
+  background-color:#333;
+  color: white;
+}
+.parrent {
+   padding-top: 30px;
+  margin: 20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+  background: color #111;   
+}
+.Card img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+  border-radius:10px ;
+}
+.Card p {
+  margin: 10px 0px ;
+}
+ 
+.chart-btn{
+  display: flex;
+  gap: 3px;
+  justify-content: space-around;
+}
+ 
+.heart-btn{
+  background-color: rgb(243, 242, 245);
+  border: 1px solid red;
+  border-radius: 5px;
+  margin-left: 50px;
+}

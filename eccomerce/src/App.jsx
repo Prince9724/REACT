@@ -1,9 +1,12 @@
  import React from 'react'
- 
+import Navbar from './component/Navbar/Navbar'
+import Card from './component/Card/Card.jsx'
+import { Navigate } from 'react-router'
  const App = () => {
    return (
      <div>
-      prince
+      <Navbar />
+      <Card />
      </div>
    )
  }
