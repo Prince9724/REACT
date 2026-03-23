@@ -1,12 +1,20 @@
  import React from 'react'
 import Navbar from './component/Navbar/Navbar'
-import Card from './component/Card/Card.jsx'
 import { Navigate } from 'react-router'
+import { Routes , Route } from 'react-router'
+import Card from './component/Card/Card'
+// import Cart from './component/Cart/Cart.jsx'
  const App = () => {
    return (
-     <div>
+    <div>
       <Navbar />
-      <Card />
+
+      <Routes>
+
+        <Route path='/' element={<Card/>}/>
+       
+      </Routes>
+
      </div>
    )
  }

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Cart from '../Cart/Cart'
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -75,7 +75,7 @@ const Navbar = () => {
                             aria-label="Search"
                         />
                         <a className="btn btn-outline-success" type="submit">
-                            Chart
+                            Cart
                         </a>
                     </form>
                 </div>
