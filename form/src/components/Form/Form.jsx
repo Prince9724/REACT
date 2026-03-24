@@ -33,11 +33,11 @@ const Form = () => {
     }
 
     return (
-        <div style={{ height: "100vh" }} className=' container d-flex justify-content-center align-items-center'>
+        <div style={{ height: "100vh" }} className='mt-5 container d-flex justify-content-center align-items-center'>
             <form onSubmit={handlleSubmite}>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
-                        Your Name
+                     Your Name 
                     </label>
                     <input
                         onChange={(e) => setUser({ ...user, name: e.target.value })}
@@ -90,6 +90,20 @@ const Form = () => {
                         id="contact"
                         aria-describedby="emailHelp"
                         onChange={(e) => setUser({ ...user, contact: e.target.value })}
+
+                    />
+
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">
+                        Fees
+                    </label>
+                    <input
+                        type="number"
+                        className="form-control"
+                        id="fees"
+                        aria-describedby="emailHelp"
+                        onChange={(e) => setUser({ ...user, fees: e.target.value })}
 
                     />
 
