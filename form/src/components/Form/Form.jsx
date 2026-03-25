@@ -20,10 +20,10 @@ const Form = () => {
             alert("Name is requared !!")
         }
         else if (!paswordRejex.test(user.pasword) || user.pasword == " ") {
-            alert(" Pasword is requared !!");
+            alert(" Pasword is week !!");
         }
         else if (user.contact.trim() == "" || !isValidContact(user.contact)) {
-            alert("minimum 10 digit requared");
+            alert("minimum 10 digit requared in contact");
         }
         else {
             const users = JSON.parse(localStorage.getItem("users")) || [];//local storage se user name ki array ko get kr liya hai 
