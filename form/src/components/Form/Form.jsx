@@ -6,6 +6,9 @@ const Form = () => {
     const [user, setUser] = useState({})
     const [check, setcheck] = useState(false)
     const [eye, seteye] = useState(false);
+    const isValidContact = (contact) => {
+        return /^\d{10}$/.test(contact);
+    };
     const handlleSubmite = (e) => {
         e.preventDefault();
         const paswordRejex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -19,7 +22,9 @@ const Form = () => {
         else if (!paswordRejex.test(user.pasword) || user.pasword == " ") {
             alert(" Pasword is requared !!");
         }
-
+        else if (user.contact.trim() == "" || !isValidContact(user.contact)) {
+            alert("minimum 10 digit requared");
+        }
         else {
             const users = JSON.parse(localStorage.getItem("users")) || [];//local storage se user name ki array ko get kr liya hai 
             users.push(user);// users ke ander nai user ki ki value push ho rhi hai aur vo local storage ke ander set ho rhi hai 
@@ -27,17 +32,17 @@ const Form = () => {
             // ki key pr user ki puri information store hai. string form me.  
             navigate("/user")
         }
-            
+
 
 
     }
 
     return (
-        <div style={{ height: "100vh" }} className='mt-5 container d-flex justify-content-center align-items-center'>
-            <form onSubmit={handlleSubmite}>
+        <div style={{ height: "100vh" }} className='mt-5 container d-flex justify-content-center flex-column h-100 align-items-center'>
+            <form className='border border-2 p-3 border shadow rounded' onSubmit={handlleSubmite}>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
-                     Your Name 
+                        Your Name
                     </label>
                     <input
                         onChange={(e) => setUser({ ...user, name: e.target.value })}
@@ -70,7 +75,7 @@ const Form = () => {
                         Password
                     </label>
                     <input
-                        type= {eye ?"text": "password"}
+                        type={eye ? "text" : "password"}
                         className="form-control"
                         id="pasword"
                         onChange={(e) => setUser({ ...user, pasword: e.target.value })}
@@ -119,10 +124,12 @@ const Form = () => {
                     Submit
                 </button>
             </form>
-
+        <div className='p-5'>
+  
+        </div>
 
         </div>
     )
 }
- 
+
 export default Form

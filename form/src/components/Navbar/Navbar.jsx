@@ -2,7 +2,7 @@ import react from 'react'
 const Navbar = () => {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar bg-secondary border shadow navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         Navbar
@@ -26,12 +26,7 @@ const Navbar = () => {
                             <a className="nav-link" href="/user">
                                 user
                             </a>
-                            <a className="nav-link" href="#">
-                                Pricing
-                            </a>
-                            <a className="nav-link disabled" aria-disabled="true">
-                                Disabled
-                            </a>
+                             
                         </div>
                     </div>
                 </div>
