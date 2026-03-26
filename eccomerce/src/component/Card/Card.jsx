@@ -1822,7 +1822,7 @@ const Card = () => {
                     Products.products.map((product) => (
                         <div className='Card' key={product.id}>
                             <img className='mb-3' src={product.images[0]} alt="" />
-                            <h4 className='d-flex justify-content-start'>{product.title} </h4>
+                            <h4 className='d-flex justify-content-start' >{product.title} </h4>
                             <p className='d-flex justify-content-start'>price: {product.price}$</p>
                             <p>{product.description}</p>
                             <div className='chart-btn'>
