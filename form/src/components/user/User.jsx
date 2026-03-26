@@ -1,7 +1,7 @@
 import React, { use } from 'react'
 import { useState } from 'react'
 const User = () => {
-    const [users, setusers] = useState(JSON.parse(localStorage.getItem("users")) || [])
+    const [users, setusers] = cc
     const [search, setsearch] = useState("");
     const [check, setcheck]=useState(false);
     const remove = () => {

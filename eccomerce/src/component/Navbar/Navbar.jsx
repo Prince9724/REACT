@@ -1,6 +1,8 @@
 import React from 'react'
 import Cart from '../Cart/Cart'
+import { useNavigate } from 'react-router'
 const Navbar = () => {
+    const navigate = useNavigate();
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -21,7 +23,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">
+                            <a className="nav-link active" aria-current="page" href="/">
                                 Home
                             </a>
                         </li>
@@ -74,7 +76,8 @@ const Navbar = () => {
                             placeholder="Search"
                             aria-label="Search"
                         />
-                        <a className="btn btn-outline-success" type="submit">
+        
+                        <a className="btn btn-outline-success" href='/cart' type="submit">
                             Cart
                         </a>
                     </form>

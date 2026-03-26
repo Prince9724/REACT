@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "../Card/Card.css"
-// import { Navigate } from 'react-router'
+import { useNavigate } from 'react-router'
 const Card = () => {
     const Products = {
         "products": [
@@ -1805,7 +1805,7 @@ const Card = () => {
         "skip": 0,
         "limit": 30
     }
-    // const navigate = Navigate();
+    const navigate = useNavigate();
     const [user, setuser] = useState()
      
     const handleChart = (product) => {
@@ -1813,7 +1813,7 @@ const Card = () => {
         cart.push(product);
         localStorage.setItem("cart", JSON.stringify(cart));
         alert("Product is added to cart");
-        // navigate("/Cart")
+        navigate("/cart")
     }
     return (
         <div className='container-fluid'>

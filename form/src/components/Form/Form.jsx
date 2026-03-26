@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router';
 const Form = () => {
     const navigate = useNavigate();
+    //what is usestate = > user ek variable hai aur setuser usme value ko update krne ka kaaam krta hai 
+    //usestate me user ki default value ko rkhte hai ham; 
     const [user, setUser] = useState({})
     const [check, setcheck] = useState(false)
     const [eye, seteye] = useState(false);
