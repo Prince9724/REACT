@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 
 const Cart = () => {
   const [carts, setcarts] = useState(JSON.parse(localStorage.getItem("cart")) || []);
-  const remove =()=>{
+  const remove =(i)=>{
     const arr = [...carts]
-    arr.splice(0,1);
+    arr.splice(i,1);
     localStorage.setItem("cart",JSON.stringify(arr));
     setcarts(arr);
-    console.log("++")
+    // console.log("++")
   }
   return (
     <div>
       {
-        carts.map((product) => (
+        carts.map((product,i) => (
           <div className="container mt-5">
             <div className="card mb-3" style={{ maxWidth: 540 }}>
               <div className="row g-0">
@@ -29,7 +29,7 @@ const Cart = () => {
                       <p className="card-text">
                      price : {product.price}/-
                     </p>
-                    <button onClick={remove} className='btn btn-primary'>
+                    <button onClick={()=>remove(i)} className='btn btn-primary'>
                       remove
                     </button>
                     </div>

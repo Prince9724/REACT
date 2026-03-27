@@ -1,13 +1,14 @@
 import React, { use } from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';//navigate ko pahle terminal me instaal kiya hai fir
 const Form = () => {
     const navigate = useNavigate();
     //what is usestate = > user ek variable hai aur setuser usme value ko update krne ka kaaam krta hai 
     //usestate me user ki default value ko rkhte hai ham; 
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState({})// ek usestate bnaaya hai jiska naam user hai aur ke ander ek object pass kiya hai. 
     const [check, setcheck] = useState(false)
-    const [eye, seteye] = useState(false);
+    const [eye, seteye] = useState(false);//ek eye naam ki usestate hai jisme by default value iski false rkhi hai 
+    //iska use mai pasword ko seen krne ke liye kr rha hu 
     const isValidContact = (contact) => {
         return /^\d{10}$/.test(contact);
     };
@@ -41,13 +42,15 @@ const Form = () => {
 
     return (
         <div style={{ height: "100vh" }} className='mt-5 container d-flex justify-content-center flex-column h-100 align-items-center'>
-            <form className='border border-2 p-3 border shadow rounded' onSubmit={handlleSubmite}>
+          
+              <form className='border border-2 p-3 border shadow rounded' onSubmit={handlleSubmite}>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
                         Your Name
                     </label>
                     <input
-                        onChange={(e) => setUser({ ...user, name: e.target.value })}
+                        onChange={(e) => setUser({ ...user, name: e.target.value })}//setuser me user name ki jo object hai uske ander 
+                        //name name naam ki key bnaaya aur uspr kuch value store krayaa
                         type="text"
                         className="form-control"
                         id="name"

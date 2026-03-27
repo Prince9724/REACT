@@ -1805,6 +1805,10 @@ const Card = () => {
         "skip": 0,
         "limit": 30
     }
+   async function fetchProduct (){
+     const products =   await fetch("https://dummyjson.com/products")
+     const data = await resizeBy.json(Products);
+    }
     const navigate = useNavigate();
     const [user, setuser] = useState()
      
@@ -1813,7 +1817,7 @@ const Card = () => {
         cart.push(product);
         localStorage.setItem("cart", JSON.stringify(cart));
         alert("Product is added to cart");
-        navigate("/cart")
+        // navigate("/cart")
     }
     return (
         <div className='container-fluid'>
