@@ -7,12 +7,12 @@ const Cart = () => {
     arr.splice(i,1);
     localStorage.setItem("cart",JSON.stringify(arr));
     setcarts(arr);
-    // console.log("++")
+    console.log("++")
   }
   return (
     <div>
       {
-        carts.map((product,i) => (
+        carts.map((product, i) => (
           <div className="container mt-5">
             <div className="card mb-3" style={{ maxWidth: 540 }}>
               <div className="row g-0">
