@@ -14,6 +14,9 @@ const Cart = () => {
       {
         carts.map((product, i) => (
           <div className="container mt-5">
+            <div>
+              <p>total :{product.price[i]+product.price[i]}</p>
+            </div>
             <div className="card mb-3" style={{ maxWidth: 540 }}>
               <div className="row g-0">
                 <div className="col-md-4">
@@ -40,8 +43,7 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-
-
+          
           </div>
 
 
