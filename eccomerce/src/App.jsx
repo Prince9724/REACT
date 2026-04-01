@@ -4,6 +4,8 @@ import { Navigate } from 'react-router'
 import { Routes , Route } from 'react-router'
 import Card from './component/Card/Card'
 import Cart from './component/Cart/Cart'
+import View from './component/veiw/View'
+ 
 // import Cart from './component/Cart/Cart.jsx'
  const App = () => {
    return (
@@ -13,6 +15,7 @@ import Cart from './component/Cart/Cart'
       <Routes>
 
         <Route path='/' element={<Card/>}/>
+        <Route path='/view' element={<View/>} />
        <Route path='/cart' element = {<Cart />} />
       </Routes>
 

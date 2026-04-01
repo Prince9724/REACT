@@ -1,6 +1,8 @@
     import React, { useEffect, useState } from 'react'
     import "../Card/Card.css"
     import { useNavigate } from 'react-router'
+    import axios from 'axios'
+import Detail from '../productdetail/Detail'
     const Card = () => {
         const [cart, setcart]= useState([])
         useEffect(()=>{
@@ -9,41 +11,38 @@
             fetchProduct();
         },[])
         
-    async function fetchProduct (){
-        const res = await fetch("https://dummyjson.com/products");
-        const data = await res.json();
-        console.log(data)
-            setcart(data.products);
-        }
+    // async function fetchProduct (){
+    //     const res = await fetch("https://dummyjson.com/products");
+    //     const data = await res.json();
+    //     console.log(data)
+    //         setcart(data.products);
+    //     } 
+
+    const fetchProduct = async ()=>{
+         const res = await axios.get("https://dummyjson.com/products")   
+         setcart(res.data.products)
+    }
         // const navigate = useNavigate();
         const [user, setuser] = useState()
         
         const handleChart = (product) => {
+            console.log("++++")
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
             cart.push(product);
             localStorage.setItem("cart", JSON.stringify(cart));
             // alert("Product is added to cart");
             // navigate("/cart")
         }
+        
         return (
           
             <div className='container-fluid'>
                 <div className="container justify-content-center d-flex flex-wrap">
                     {
-                        cart.map((product) => (
-                            <div className='Card' key={product.id}>
-                                <img className='mb-3' src={product.images[0]} alt="" />
-                                <h4 className='d-flex justify-content-start' >{product.title} </h4>
-                                <p className='d-flex justify-content-start'>price: {product.price}$</p>
-                                <p>{product.description}</p>
-                                <div className='chart-btn'>
-                                    <div className='d-flex'>
-                                        <button className='btn btn-success' onClick={() => handleChart(product)}>Cart</button>
-                                        <button className='veiw ms-2 btn btn-secondary'>veiw </button>
-                                    </div>
-                                    <button className='heart-btn'>❤️</button>
-                                </div>
-                            </div>
+                        cart.map((product,i) => (
+                            <Detail key= {i} name = {product.title} image = {product.images[0]} des ={ product.description} 
+                            price = {product.price} addtocart = {handleChart}
+                        />
                         ))
                         
                     }
