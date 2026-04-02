@@ -10,9 +10,9 @@ const Detail = ({name , des, price, image ,key ,addtocart}) => {
             <p>{des}</p>
             <div className='chart-btn'>
                 <div className='d-flex'>
-                    <button className='btn btn-success' onClick={() => addtocart(name , des, price, image)}>Cart</button>
-                    <button className='veiw ms-2 btn btn-secondary'onClick={()=>{
-                        navigate("/veiw ",{state : {name , des, price, image}})
+                    <button className='btn btn-success' onClick={() => addtocart({name , des, price, image , qty:1})}>Cart</button>
+                    <button className='veiw ms-2 btn btn-secondary'onClick={()=>{   
+                        navigate("/view ",{state : {name , des, price, image}})
                     }}>veiw </button>
                 </div>
                 <button className='heart-btn'>❤️</button>

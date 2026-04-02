@@ -1,14 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 
 const Cart = () => {
   const [carts, setcarts] = useState(JSON.parse(localStorage.getItem("cart")) || []);
-  // const [total, settotal] = useState(0);
+  const [total, settotal] = useState(0);
   const remove = (i) => {
     const arr = [...carts]
     arr.splice(i, 1);
     localStorage.setItem("cart", JSON.stringify(arr));
     setcarts(arr);
     console.log("++")
+  }
+  useEffect(()=>{
+    console.log("----")
+    totalprice();
+  },[])
+
+  const totalprice =()=>{
+   const cartprice =  carts.reduce((a,b)=>a.price + b.price);
+   settotal(cartprice); 
   }
  
 //   const Totalprice = ()=>{
@@ -19,11 +28,8 @@ const Cart = () => {
     <div className='container-fluid d-flex  flex-wrap justify-content-center '>
       {
        carts.map((product, i) => (
-          <div className="container mt-5 ">
+          <div key={i} className="container mt-5 ">
             <div>
-              {/* <div>
-                <p className='text-white'> total : {total}</p>
-              </div> */}
               <div className="card mb-3" style={{ maxWidth: 540 }}>
                 <div className="row g-0">
                   <div className="col-md-4">
@@ -38,6 +44,9 @@ const Cart = () => {
                       <div className='d-flex justify-content-around'>
                         <p className="card-text">
                           price : {product.price}$
+                        </p>
+                        <p>
+                          Qyt :{product.qty}
                         </p>
                         <button onClick={() => remove(i)} className='btn btn-primary'>
                           remove
@@ -54,14 +63,12 @@ const Cart = () => {
 
           </div>
 
-
-
         ))
       }
-      {/* <div>
-        <p></p>
-      </div> */}
-      
+      <div>
+        <p className='text-white'>Total: {total} </p>
+      </div>
+     
         
       
     </div>

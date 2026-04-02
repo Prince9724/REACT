@@ -28,7 +28,14 @@ import Detail from '../productdetail/Detail'
         const handleChart = (product) => {
             console.log("++++")
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            const res = cart.findIndex((e)=>e.name == product.name);
+            if(res == -1){
             cart.push(product);
+            } 
+            if(res!= -1){
+                cart[res].qty++;
+            }
             localStorage.setItem("cart", JSON.stringify(cart));
             // alert("Product is added to cart");
             // navigate("/cart")
