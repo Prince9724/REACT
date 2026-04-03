@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Cart from '../Cart/Cart'
 import { useNavigate } from 'react-router'
 const Navbar = () => {
-    const navigate = useNavigate();
+    // const [search , setsearch]= useState()
+    // const searchProduct = ()=>{
+        
+    //     }
+        const navigate = useNavigate();
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -63,12 +67,13 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
-                        <input
+                        {/* <input
+                        // onChange={(e)=>setsearch(e.target.value)}
                             className="form-control me-2"
                             type="search"
                             placeholder="Search"
                             aria-label="Search"
-                        />
+                        /> */}
         
                         <a className="btn btn-outline-success" href='/cart' type="submit">
                             Cart

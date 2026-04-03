@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-
+import "../Cart/Cart.css"
 const Cart = () => {
   const [carts, setcarts] = useState(JSON.parse(localStorage.getItem("cart")) || []);
   const [total, settotal] = useState(0);
@@ -9,15 +9,24 @@ const Cart = () => {
     localStorage.setItem("cart", JSON.stringify(arr));
     setcarts(arr);
     console.log("++")
+    totalprice();
   }
   useEffect(()=>{
     console.log("----")
     totalprice();
   },[])
 
-  const totalprice =()=>{
-   const cartprice =  carts.reduce((a,b)=>a.price + b.price);
-   settotal(cartprice); 
+  // const totalprice =()=>{
+  //  const cartprice =  carts.reduce((a,b)=>a.price + b.price);
+  //  settotal(cartprice); 
+  // }
+    const totalprice = () => {
+    const cartprice = carts.reduce((acc, item) => {
+      return acc + item.price * item.qty;
+    }, 0);
+
+    settotal(cartprice);
+    
   }
  
 //   const Totalprice = ()=>{
@@ -25,11 +34,17 @@ const Cart = () => {
 // //   settotal(price)
 // //   }
   return (
-    <div className='container-fluid d-flex  flex-wrap justify-content-center '>
-      {
+    
+    <div className='container-fluid d-flex  justify-content-center '>
+     
+      <div className='bg-success w-25 '>
+        <h3 className='text-white mt-4 text-center'>Total :  {total.toFixed(2)}$ </h3>
+     </div>
+      <div className='cart-container container mt-5'>
+        {
        carts.map((product, i) => (
-          <div key={i} className="container mt-5 ">
-            <div>
+          <div key={i} className=" mb-4 ">
+            
               <div className="card mb-3" style={{ maxWidth: 540 }}>
                 <div className="row g-0">
                   <div className="col-md-4">
@@ -59,17 +74,13 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            
 
           </div>
 
         ))
       }
-      <div>
-        <p className='text-white'>Total: {total} </p>
       </div>
-     
-        
       
     </div>
   )
