@@ -14,7 +14,7 @@ const Cart = () => {
   useEffect(()=>{
     console.log("----")
     totalprice();
-  },[])
+  },[carts])
 
   // const totalprice =()=>{
   //  const cartprice =  carts.reduce((a,b)=>a.price + b.price);

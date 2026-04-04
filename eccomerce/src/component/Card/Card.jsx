@@ -4,12 +4,14 @@ import { useNavigate } from 'react-router'
 import axios from 'axios'
 import Detail from '../productdetail/Detail'
 const Card = () => {
+    const [search, setsearch] = useState()
     const [cart, setcart] = useState([])
+    const [check, setcheck] = useState(false)
     useEffect(() => {
         console.log("use effect")
         // handleChart();
         fetchProduct();
-    }, [])
+    }, [check])
 
     // async function fetchProduct (){
     //     const res = await fetch("https://dummyjson.com/products");
@@ -24,8 +26,7 @@ const Card = () => {
         
     }
     // const navigate = useNavigate();
-    const [user, setuser] = useState()
-
+    
     const handleChart = (product) => {
         console.log("++++")
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -41,11 +42,22 @@ const Card = () => {
         // alert("Product is added to cart");
         // navigate("/cart")
     }
-    const [search, setsearch] = useState()
     const searchProduct = () => {
         console.log("search")
       const result =   cart.filter((product)=> product.title.toLowerCase().includes(search.toLowerCase()));
         setcart(result)
+    }
+    const LowHigh =()=>{
+        const arr = [...cart]
+        
+        if(check){
+            arr.sort((a,b)=> a.price - b.price)
+            console.log(check);
+        }
+        if(!check){
+            arr.sort((a,b)=>b.price - a.price)
+        }
+        setcheck(!check)
     }
     
     return (
@@ -54,7 +66,8 @@ const Card = () => {
             <div className='d-flex p-3 justify-content-center'>
                 <input onChange={(e)=>setsearch(e.target.value)} className='w-50' type="text" />
                 <button className='btn btn-outline-light mx-3'onClick={searchProduct}>Add</button>
-                <button className='btn btn-outline-danger' onClick={fetchProduct}>reset</button>
+                <button className='btn btn-outline-danger ' onClick={fetchProduct}>reset</button>
+                <button className='btn btn-outline-warning ms-3' onClick={LowHigh}> {!check ? "Low To High" : "High To low"}</button>
             </div>
             <div className="container justify-content-center d-flex flex-wrap">
                 {
