@@ -1,0 +1,114 @@
+/* Page background (same dark look) */
+body {
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card */
+.card-box {
+  background: #1a1a1a;
+  border-radius: 18px;
+  padding: 20px;
+  width: 280px;
+
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.3s ease;
+}
+
+/* 🔥 Hover Effect */
+.card-box:hover {
+  transform: translateY(-6px);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+/* Image */
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+/* Image hover zoom */
+.card-box:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* Title */
+.card-box h4 {
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Price */
+.price {
+  color: #ccc;
+  margin: 5px 0;
+}
+
+/* Description */
+.desc {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+/* Buttons */
+.card-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Common button */
+.btn {
+  border-radius: 8px;
+  padding: 6px 14px;
+  border: none;
+  transition: 0.3s;
+}
+
+/* Cart button (GREEN as you want 💚) */
+.cart-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.cart-btn:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+/* View button */
+.view-btn {
+  background-color: #555;
+  color: #fff;
+}
+
+.view-btn:hover {
+  background-color: #777;
+}
+
+/* Heart */
+.heart-btn {
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  border-radius: 50%;
+  padding: 6px 10px;
+  color: #ff4d4d;
+  transition: 0.3s;
+}
+
+/* Heart hover */
+.heart-btn:hover {
+  background-color: #ff4d4d;
+  color: #fff;
+  transform: scale(1.15);
+}

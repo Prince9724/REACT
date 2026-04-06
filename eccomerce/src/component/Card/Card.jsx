@@ -11,7 +11,7 @@ const Card = () => {
         console.log("use effect")
         // handleChart();
         fetchProduct();
-    }, [check])
+    }, [])
 
     // async function fetchProduct (){
     //     const res = await fetch("https://dummyjson.com/products");
@@ -47,29 +47,33 @@ const Card = () => {
       const result =   cart.filter((product)=> product.title.toLowerCase().includes(search.toLowerCase()));
         setcart(result)
     }
-    const LowHigh =()=>{
-        const arr = [...cart]
-        
-        if(check){
-            arr.sort((a,b)=> a.price - b.price)
-            console.log(check);
-        }
-        if(!check){
-            arr.sort((a,b)=>b.price - a.price)
-        }
-        setcheck(!check)
-    }
+    const LowHigh = () => {
+  const arr = [...cart];//cart ko arr ke ander copy kiya hai 
+
+  if (check) {//agar chaeck ki value true hoti hai to ye condition chlega 
     
+    arr.sort((a, b) => a.price - b.price);
+  } else {
+     
+    arr.sort((a, b) => b.price - a.price);
+  }
+
+  setcart(arr);    //arr jo jisme hmne cart ko stor kiya hai usko set card ke ander update kr rhe hai     
+  setcheck(!check);   // check ki value ko false k ke setcheck ke ander bhej rhe hai  
+};
     return (
 
         <div className='container-fluid'>
             <div className='d-flex p-3 justify-content-center'>
-                <input onChange={(e)=>setsearch(e.target.value)} className='w-50' type="text" />
+                <input onChange={(e)=>setsearch(e.target.value)} className='w-50' value={search||""} type="text" />
                 <button className='btn btn-outline-light mx-3'onClick={searchProduct}>Add</button>
-                <button className='btn btn-outline-danger ' onClick={fetchProduct}>reset</button>
-                <button className='btn btn-outline-warning ms-3' onClick={LowHigh}> {!check ? "Low To High" : "High To low"}</button>
+                <button className='btn btn-outline-danger ' onClick={()=>{
+                    fetchProduct();
+                    setsearch("");
+                }}>reset</button>
+                <button className='btn btn-outline-warning ms-3'onChange={(e) => setcheck(!check)} onClick={LowHigh}> {!check ? "Low To High" : "High To low"}</button>
             </div>
-            <div className="container justify-content-center d-flex flex-wrap">
+            <div className="container justify-content-center d-flex flex-wrap gap-3">
                 {
                     cart.map((product, i) => (
                         <Detail key={i} name={product.title} image={product.images[0]} des={product.description}

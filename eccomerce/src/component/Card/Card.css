@@ -40,3 +40,26 @@
   border-radius: 5px;
   margin-left: 50px;
 }
+                              /* Mobile view fix */
+@media (max-width: 576px) {
+  
+  .d-flex.p-3 {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px;
+  }
+
+  .d-flex.p-3 input {
+    width: 100% !important;
+  }
+
+  .d-flex.p-3 button {
+    width: 100%;
+  }
+
+}
+@media (max-width: 576px) {
+  .d-flex.p-3 button {
+    padding: 8px;
+  }
+}
