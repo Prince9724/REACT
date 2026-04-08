@@ -31,7 +31,8 @@ const Card = () => {
         console.log("++++")
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        const res = cart.findIndex((e) => e.name == product.name);
+        const res = cart.findIndex((e) => e.name == product.name);//foindindex e.name aur product.name ko ek dusre ke sath compair krega 
+        //aur agr dono match  nahi hua to -1 dega aur agar match ho gya to ek positive number dega 
         if (res == -1) {
             cart.push(product);
         }
@@ -66,7 +67,7 @@ const Card = () => {
         <div className='container-fluid'>
             <div className='d-flex p-3 justify-content-center'>
                 <input onChange={(e)=>setsearch(e.target.value)} className='w-50' value={search||""} type="text" />
-                <button className='btn btn-outline-light mx-3'onClick={searchProduct}>Add</button>
+                <button className='btn btn-outline-light mx-3'onClick={searchProduct}>Search</button>
                 <button className='btn btn-outline-danger ' onClick={()=>{
                     fetchProduct();
                     setsearch("");

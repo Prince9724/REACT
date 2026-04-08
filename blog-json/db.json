@@ -1,0 +1,25 @@
+{
+    "user" :[
+    {
+        "id": 1,
+        "name": "prince",
+        "age":18,
+        "role": "web developer"
+    },
+    {
+        "id":2,
+        "name": "suraj",
+        "age":22,
+        "role":"full stack web developer"
+    }   
+   
+],
+"product":[
+     {
+        "id" : 3,
+        "name":"kanish",
+        "age": 21,
+        "role": "Ai ML"
+    }
+]
+}

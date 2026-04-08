@@ -1,0 +1,1 @@
+//json ko run krne ke liye npx json-server db.json
