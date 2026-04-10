@@ -1,11 +1,16 @@
  import React from 'react'
 import Singup from '../components/Singup'
+import { Route, Routes } from 'react-router'
+import Home from '../screen/Home'
  
  const App = () => {
    return (
-     <div>
-      <Singup/>
-     </div>
+    
+      <Routes>
+        <Route path='/' element={<Singup />} />
+        <Route path='/home' element={<Home/>} />
+      </Routes>
+     
    )
  }
  

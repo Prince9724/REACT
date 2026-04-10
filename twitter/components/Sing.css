@@ -14,5 +14,6 @@
 .Signin{
     color: #00C3FE;
     cursor: pointer;
-   
+    border: none;
+    background-color: white;
 }

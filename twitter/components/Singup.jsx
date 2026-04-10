@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { user_api } from '../utils/Api'
 import axios from 'axios'
+import { useNavigate } from 'react-router'
 import '../components/Sing.css'
 const Singup = () => {
-
+    const navigate = useNavigate()
     const [user, setuser] = useState({});
     const postUser = async () => {
         const res = await axios.post(user_api, user)
@@ -109,7 +110,11 @@ const Singup = () => {
                             Submit
                         </button>
                     </div>
-                    <p className='mt-3'>You have an account? <span className=' Signin'>Sign In</span></p>
+                    <p className='mt-3'>You have an account? <span>
+                        <button  className=' Signin'
+                        onClick={()=>navigate("/home")}
+                        >Sign In</button></span>
+                        </p>
 
                 </div>
 
