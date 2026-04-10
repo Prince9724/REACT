@@ -11,3 +11,8 @@
     color:#BDFFFF;
     background: linear-gradient(to right,#01A0F5,#00C3FE);
 }
+.Signin{
+    color: #00C3FE;
+    cursor: pointer;
+   
+}

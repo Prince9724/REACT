@@ -9,11 +9,11 @@
       "id": "FyKikoXaefs"
     },
     {
-      "name": " Prince",
-      "email": "Prncegondg123@gmail.com",
+      "name": "Prince",
+      "email": "princegondrw123@gmail.com",
       "contact": "1234567890",
-      "pasword": "Prince@123@",
-      "id": "Rv54ZGPp0kk"
+      "pasword": "Prince@1234",
+      "id": "bqYSVMdE6rs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

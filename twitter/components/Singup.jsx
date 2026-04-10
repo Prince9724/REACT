@@ -109,6 +109,7 @@ const Singup = () => {
                             Submit
                         </button>
                     </div>
+                    <p className='mt-3'>You have an account? <span className=' Signin'>Sign In</span></p>
 
                 </div>
 
