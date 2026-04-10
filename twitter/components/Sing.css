@@ -1,0 +1,13 @@
+.form-control{
+    border-radius: 20px;
+    border: 1px solid #019EF4;
+}
+.submit{
+    height: 40px;
+    padding: 3px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    color:#BDFFFF;
+    background: linear-gradient(to right,#01A0F5,#00C3FE);
+}
