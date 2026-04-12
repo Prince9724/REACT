@@ -14,6 +14,17 @@
       "contact": "1234567890",
       "pasword": "Prince@1234",
       "id": "bqYSVMdE6rs"
+    },
+    {
+      "name": "roshan",
+      "id": "y9sZI0-zbgA"
+    },
+    {
+      "name": "ayush",
+      "email": "ayush@gmail.com",
+      "contact": "1234567890",
+      "pasword": "Ayush@1234",
+      "id": "jVYwbnUireU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

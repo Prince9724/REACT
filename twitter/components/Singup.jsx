@@ -22,8 +22,9 @@ const Singup = () => {
     const handlleSubmite = () => {
         console.log("submit")
         
-         if(user.name == "  "){
-            alert("please Enter name")
+         if(user.name ==""||user.email==""||user.contact==""||user.pasword==""){
+            alert("please fill form")
+                 
         }
          else if (!emailRejex.test(user.email)) {
             alert("email is invalid !!")
@@ -112,7 +113,7 @@ const Singup = () => {
                     </div>
                     <p className='mt-3'>You have an account? <span>
                         <button  className=' Signin'
-                        onClick={()=>navigate("/home")}
+                        onClick={()=>navigate("/signIn")}
                         >Sign In</button></span>
                         </p>
 
