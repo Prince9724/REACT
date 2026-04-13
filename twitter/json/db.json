@@ -25,6 +25,41 @@
       "contact": "1234567890",
       "pasword": "Ayush@1234",
       "id": "jVYwbnUireU"
+    },
+    {
+      "name": "prince",
+      "email": "Prncegondg123@gmail.com",
+      "contact": "1234567890",
+      "pasword": "Prince@1234",
+      "id": "RRHX3Po5Q5E"
+    },
+    {
+      "name": "divya",
+      "email": "divya@gmail.com",
+      "contact": "1234567890",
+      "pasword": "Divya@123",
+      "id": "SK2lF7ZFdFE"
+    },
+    {
+      "name": "roshan",
+      "email": "roshan@gmail.com",
+      "contact": "1234567890",
+      "pasword": "Roshan@123",
+      "id": "I4viqwpY5S0"
+    },
+    {
+      "name": "aman",
+      "email": "aman@gmail.com",
+      "contact": "1234567890",
+      "pasword": "Aman@1234",
+      "id": "4XRauH0nmRs"
+    },
+    {
+      "name": "om",
+      "email": "om@gmail.com",
+      "contact": "1234567890",
+      "pasword": "Om@12345",
+      "id": "RrcE7EkNO-U"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

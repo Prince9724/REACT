@@ -6,10 +6,14 @@ import '../components/Sing.css'
 const Singup = () => {
     const navigate = useNavigate()
     const [user, setuser] = useState({});
+    const [check, setcheck] = useState(false)
+        const [see, setsee] = useState(false)
+    
     const postUser = async () => {
         const res = await axios.post(user_api, user)
         if (res.status == 201) {
             alert("successfull signup");
+            navigate("/signin")
             user.name || user.email || user.contact || user.pasword == "";
         }
         else {
@@ -96,25 +100,37 @@ const Singup = () => {
                             Password
                         </label>
                         <input
-                            type="password"
+                            type={see ? "text" : "password"}
                             className="form-control"
                             id="pasword"
                             onChange={(e) => setuser({ ...user, pasword: e.target.value })}
                         />
                     </div>
+                        <svg onClick={() => setsee(!see)}  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25" fill="rgba(70,146,221,1)"><path d="M12.0003 3C17.3924 3 21.8784 6.87976 22.8189 12C21.8784 17.1202 17.3924 21 12.0003 21C6.60812 21 2.12215 17.1202 1.18164 12C2.12215 6.87976 6.60812 3 12.0003 3ZM12.0003 19C16.2359 19 19.8603 16.052 20.7777 12C19.8603 7.94803 16.2359 5 12.0003 5C7.7646 5 4.14022 7.94803 3.22278 12C4.14022 16.052 7.7646 19 12.0003 19ZM12.0003 16.5C9.51498 16.5 7.50026 14.4853 7.50026 12C7.50026 9.51472 9.51498 7.5 12.0003 7.5C14.4855 7.5 16.5003 9.51472 16.5003 12C16.5003 14.4853 14.4855 16.5 12.0003 16.5ZM12.0003 14.5C13.381 14.5 14.5003 13.3807 14.5003 12C14.5003 10.6193 13.381 9.5 12.0003 9.5C10.6196 9.5 9.50026 10.6193 9.50026 12C9.50026 13.3807 10.6196 14.5 12.0003 14.5Z"></path></svg>
+
+                    <div className="mb-3 form-check">
+                        <input type="checkbox" className="form-check-input" id="exampleCheck1"  onChange={() => {
+                            setcheck(!check)
+                            console.log("--")
+                        }} />
+                        <label className="form-check-label"  htmlFor="exampleCheck1">
+                            Read Again
+                        </label>
+                    </div>
 
                     <div className='d-flex justify-content-center'>
                         <button type="submit" onClick={() => {
                             console.log("btn click")
+                            console.log(check)
                             handlleSubmite()
-                        }} className="submit w-100">
+                        }} className={`submit w-100 btn ${check ? "": "disabled"}`}>
                             Submit
                         </button>
                     </div>
                     <p className='mt-3'>You have an account? <span>
                         <button  className=' Signin'
                         onClick={()=>navigate("/signIn")}
-                        >Sign In</button></span>
+                        >Sign In </button></span>
                         </p>
 
                 </div>
