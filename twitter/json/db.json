@@ -1,65 +1,32 @@
 {
-  "twits": [],
+  "twits": [
+    {
+      "tweet": "hello I'am sachin",
+      "id": "yhRf5zlinp0"
+    },
+    {
+      "tweet": "tweets",
+      "id": "mzdrNUhw92Q"
+    },
+    {
+      "tweet": "Hello I'am prince",
+      "id": "CgrCMig7Io0"
+    }
+  ],
   "user": [
     {
-      "name": "anup",
-      "email": "princegondrw123@gmail.com",
-      "contact": "123456789",
-      "pasword": "rince@1234",
-      "id": "FyKikoXaefs"
-    },
-    {
-      "name": "Prince",
-      "email": "princegondrw123@gmail.com",
+      "name": "Sachin",
+      "email": "sachin@gmail.com",
       "contact": "1234567890",
-      "pasword": "Prince@1234",
-      "id": "bqYSVMdE6rs"
-    },
-    {
-      "name": "roshan",
-      "id": "y9sZI0-zbgA"
-    },
-    {
-      "name": "ayush",
-      "email": "ayush@gmail.com",
-      "contact": "1234567890",
-      "pasword": "Ayush@1234",
-      "id": "jVYwbnUireU"
+      "pasword": "Sachin@123",
+      "id": "z6fgh4S7yUY"
     },
     {
       "name": "prince",
-      "email": "Prncegondg123@gmail.com",
-      "contact": "1234567890",
-      "pasword": "Prince@1234",
-      "id": "RRHX3Po5Q5E"
-    },
-    {
-      "name": "divya",
-      "email": "divya@gmail.com",
-      "contact": "1234567890",
-      "pasword": "Divya@123",
-      "id": "SK2lF7ZFdFE"
-    },
-    {
-      "name": "roshan",
-      "email": "roshan@gmail.com",
-      "contact": "1234567890",
-      "pasword": "Roshan@123",
-      "id": "I4viqwpY5S0"
-    },
-    {
-      "name": "aman",
-      "email": "aman@gmail.com",
-      "contact": "1234567890",
-      "pasword": "Aman@1234",
-      "id": "4XRauH0nmRs"
-    },
-    {
-      "name": "om",
-      "email": "om@gmail.com",
-      "contact": "1234567890",
-      "pasword": "Om@12345",
-      "id": "RrcE7EkNO-U"
+      "email": "princegondrw123@gmail.com",
+      "contact": "123456789",
+      "pasword": "Prince@123",
+      "id": "F2nom7-OxVc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
