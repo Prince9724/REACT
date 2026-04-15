@@ -14,7 +14,7 @@ const Singup = () => {
         if (res.status == 201) {
             alert("successfull signup");
             navigate("/signin")
-            localStorage.setItem("current-key",JSON.stringify(user))
+            // localStorage.setItem("current-key",JSON.stringify())
 
             user.name || user.email || user.contact || user.pasword == "";
         }

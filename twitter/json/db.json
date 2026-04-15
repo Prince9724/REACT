@@ -1,32 +1,21 @@
 {
   "twits": [
     {
-      "tweet": "hello I'am sachin",
-      "id": "yhRf5zlinp0"
+      "tweet": "hello",
+      "id": "zSg54ndEHFg"
     },
     {
-      "tweet": "tweets",
-      "id": "mzdrNUhw92Q"
-    },
-    {
-      "tweet": "Hello I'am prince",
-      "id": "CgrCMig7Io0"
+      "tweet": "df",
+      "id": "J3u1bIwtURo"
     }
   ],
   "user": [
     {
-      "name": "Sachin",
-      "email": "sachin@gmail.com",
+      "name": "om",
+      "email": "om@gmail.com",
       "contact": "1234567890",
-      "pasword": "Sachin@123",
-      "id": "z6fgh4S7yUY"
-    },
-    {
-      "name": "prince",
-      "email": "princegondrw123@gmail.com",
-      "contact": "123456789",
-      "pasword": "Prince@123",
-      "id": "F2nom7-OxVc"
+      "pasword": "Om@12345",
+      "id": "TddQzuVVINw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

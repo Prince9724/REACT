@@ -12,6 +12,16 @@ const Signin = () => {
         const res = await axios.get("http://localhost:3000/user")
         setget(res.data)
     }
+    const login = res.data.find((u)=>u.email == user.email && u.pasword == user.pasword) 
+     
+        if (login) {
+            alert("succesfull !!");
+            localStorage.setItem("current-user",JSON.stringify(login)); 
+            navigate("/home")
+        }
+        else {
+            alert("invalid !! ")
+        }
     const [see, setsee] = useState(false)
     
     useEffect(() => {
@@ -25,16 +35,7 @@ const Signin = () => {
         // console.log("submite")
         // alert("home page")
         console.log(get)
-        const login = get.find((u) => {
-            return u.email == user.email && u.pasword == user.pasword
-        })
-        if (login) {
-            alert("succesfull !!");
-            navigate("/home")
-        }
-        else {
-            alert("invalid !! ")
-        }
+       
     }
     return (
         <div style={{ height: "100vh" }} className="container mt-5 h-100 d-flex justify-content-center">

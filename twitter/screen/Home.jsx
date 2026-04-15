@@ -3,7 +3,7 @@ import axios from 'axios'
 import { twit_api, user_api } from '../utils/Api'
 
 const Home = () => {
-  const [post, setpost] = useState({ tweet: "" })
+  const [post, setpost] = useState({ })
   const [get, setget] = useState([]);
   const [user, setuser] = useState();
 
@@ -101,12 +101,12 @@ const Home = () => {
                 </div>
                 <div className="flex-grow-1">
                   <div className="d-flex align-items-center">
-                    <h6 className="mb-0 fw-bold">{user?.name}</h6>
+                    <h6 className="mb-0 fw-bold">{u.name}</h6>
                     <span className='ms-3'>
-                      {user.email}
+                      {u.email}
                     </span>
                     <span className="text-muted ms-2" style={{ fontSize: "14px" }}>
-                      . {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear}
+                      . {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
                     </span>
                   </div>
 
