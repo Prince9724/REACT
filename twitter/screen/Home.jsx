@@ -12,13 +12,14 @@ const Home = () => {
     setget(res.data,)
   }
   const handlepost = async () => {
-    const res = await axios.post("http://localhost:3000/twits", post);
+    const res = await axios.post("http://localhost:3000/twits", {...post,user:user.email});
     setpost(res)
     console.log("added twits")
     handleget();
   }
   const userEmail = () => {
-    const getuser = JSON.parse(localStorage.getItem("current-key"))
+    const getuser = JSON.parse(localStorage.getItem("current-user"))
+    console.log(getuser)
     setuser(getuser);
   }
   useEffect(() => {
@@ -103,7 +104,7 @@ const Home = () => {
                   <div className="d-flex align-items-center">
                     <h6 className="mb-0 fw-bold">{u.name}</h6>
                     <span className='ms-3'>
-                      {u.email}
+                      {u.user}
                     </span>
                     <span className="text-muted ms-2" style={{ fontSize: "14px" }}>
                       . {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
