@@ -26,3 +26,24 @@
     color:#BDFFFF;
     background: linear-gradient(to right,#01A0F5,#00C3FE);
 }
+.layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.feed {
+  height: 100vh;
+  overflow-y: auto; /* ✅ only this scroll */
+}
+
+.rightbar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}

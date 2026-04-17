@@ -4,7 +4,7 @@ import "../components/Sing.css"
 import { twit_api, user_api } from '../utils/Api'
 
 const Home = () => {
-  const [post, setpost] = useState({ })
+  const [post, setpost] = useState({})
   const [get, setget] = useState([]);
   const [user, setuser] = useState();
 
@@ -13,7 +13,7 @@ const Home = () => {
     setget(res.data.reverse())
   }
   const handlepost = async () => {
-    const res = await axios.post("http://localhost:3000/twits", {...post,user:user.email});
+    const res = await axios.post("http://localhost:3000/twits", { ...post, user: user.email });
     setpost(res)
     console.log("added twits")
     handleget();
@@ -29,17 +29,17 @@ const Home = () => {
   }, [])
   const date = new Date;
   return (
-    <div style={{ height: "100vh" }} className='container-fluid '>
+    <div style={{ height: "100vh", width: "100%" }} className='container-fluid layout '>
 
-      <div className="row h-100">
-        <div className='col-2 d-flex flex-column'>
+      <div className="row h-100 gx-0">
+        <div className='col-2 d-flex flex-column sidebar'>
           <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60" fill="rgba(1,158,244,1)"><path d="M22.2125 5.65605C21.4491 5.99375 20.6395 6.21555 19.8106 6.31411C20.6839 5.79132 21.3374 4.9689 21.6493 4.00005C20.8287 4.48761 19.9305 4.83077 18.9938 5.01461C18.2031 4.17106 17.098 3.69303 15.9418 3.69434C13.6326 3.69434 11.7597 5.56661 11.7597 7.87683C11.7597 8.20458 11.7973 8.52242 11.8676 8.82909C8.39047 8.65404 5.31007 6.99005 3.24678 4.45941C2.87529 5.09767 2.68005 5.82318 2.68104 6.56167C2.68104 8.01259 3.4196 9.29324 4.54149 10.043C3.87737 10.022 3.22788 9.84264 2.64718 9.51973C2.64654 9.5373 2.64654 9.55487 2.64654 9.57148C2.64654 11.5984 4.08819 13.2892 6.00199 13.6731C5.6428 13.7703 5.27232 13.8194 4.90022 13.8191C4.62997 13.8191 4.36771 13.7942 4.11279 13.7453C4.64531 15.4065 6.18886 16.6159 8.0196 16.6491C6.53813 17.8118 4.70869 18.4426 2.82543 18.4399C2.49212 18.4402 2.15909 18.4205 1.82812 18.3811C3.74004 19.6102 5.96552 20.2625 8.23842 20.2601C15.9316 20.2601 20.138 13.8875 20.138 8.36111C20.138 8.1803 20.1336 7.99886 20.1256 7.81997C20.9443 7.22845 21.651 6.49567 22.2125 5.65605Z"></path></svg>
           </span>
           <div className='mt-4 p-3'>
             <p className='home fs-6 fw-bold'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(29,158,245,1)"><path d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20ZM12 15C13.3807 15 14.5 13.8807 14.5 12.5C14.5 11.1193 13.3807 9.99998 12 9.99998C10.6193 9.99998 9.5 11.1193 9.5 12.5C9.5 13.8807 10.6193 15 12 15Z"></path></svg>
               Home</p>
             <p className='fs-6 fw-bold'>#Explore</p>
-            <p className='fs-6 fw-bold'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 17H22V19H2V17H4V10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10V17ZM18 17V10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10V17H18ZM9 21H15V23H9V21Z"></path></svg> 
+            <p className='fs-6 fw-bold'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 17H22V19H2V17H4V10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10V17ZM18 17V10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10V17H18ZM9 21H15V23H9V21Z"></path></svg>
               Notification</p>
             <p className='fs-6 fw-bold'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z"></path></svg>
               Messages</p>
@@ -50,12 +50,12 @@ const Home = () => {
             <p className='fs-6 fw-bold'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"></path></svg>
               Profile</p>
             <p className='fs-6 fw-bold'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M5 10C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14C6.1 14 7 13.1 7 12C7 10.9 6.1 10 5 10ZM19 10C17.9 10 17 10.9 17 12C17 13.1 17.9 14 19 14C20.1 14 21 13.1 21 12C21 10.9 20.1 10 19 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"></path></svg>
-              More</p>                                    
+              More</p>
           </div>
           <button className='submit px-2'>Tweet</button>
         </div>
 
-        <div className='col-6 border p-3 border-2'>
+        <div className='col-6 feed overflow-x-hidden border border-2'>
           <div className='d-flex justify-content-between'>
             <div>
               <h3 className='fs-5 fw-bold'>Home</h3>
@@ -72,7 +72,8 @@ const Home = () => {
             <div className='flex-grow-1 ms-2'>
               <div style={{ width: "100%" }} className="form-floating">
                 <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                  onChange={(e) => setpost({ ...post, tweet: e.target.value })}
+                    value={post.tweet || ""}
+                 onChange={(e) => setpost({ ...post, tweet: e.target.value })}
                 ></textarea>
                 <label htmlFor="floatingTextarea">What's happening?</label>
               </div>
@@ -87,7 +88,7 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            
+
           </div>
           <hr />
           <hr />
@@ -108,12 +109,14 @@ const Home = () => {
                       {u.user}
                     </span>
                     <span className="text-muted ms-2" style={{ fontSize: "14px" }}>
-                      . {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
+                      {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
                     </span>
+                    <span className='mx-3'>{date.getHours()}:{date.getMinutes()}min</span>
+
                   </div>
 
-                  <div className="mt-1">
-                    <p className="mb-2">{u.tweet}</p>
+                  <div className="mt-1 w-25 border-1 border">
+                    <p className="mb-2 w-100 p-2" style={{ wordWrap: "break-word" }}>{u.tweet}</p>
                   </div>
 
 
@@ -122,7 +125,6 @@ const Home = () => {
                     <span style={{ cursor: "pointer" }}>🔁</span>
                     <span style={{ cursor: "pointer" }}>❤️</span>
                     <span style={{ cursor: "pointer" }}>📤</span>
-                    <span>{date.getHours}:{date.getMinutes}</span>
                   </div>
 
                 </div>
@@ -150,7 +152,7 @@ const Home = () => {
 
           </div>
         </div> */}
-        <div className="col-4 mt-2">
+        <div className="col-4 mt-2 rightbar">
 
           {/* Search */}
           <div className="mb-3">
