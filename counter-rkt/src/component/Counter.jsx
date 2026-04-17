@@ -10,6 +10,8 @@ const Counter = () => {
         <h1>{data}</h1>
         <button onClick={()=>dispatch(increament())}>++</button>
         <button onClick={()=>dispatch(decreament())}>--</button>
+        <button onClick={()=>dispatch(decreament())}>--</button>
+        <button onClick={()=>dispatch(decreament())}>--</button>
     </div>
   )
 }

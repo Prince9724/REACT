@@ -14,8 +14,6 @@ const Singup = () => {
         if (res.status == 201) {
             alert("successfull signup");
             navigate("/signin")
-            // localStorage.setItem("current-key",JSON.stringify())
-
             user.name || user.email || user.contact || user.pasword == "";
         }
         else {
@@ -25,10 +23,16 @@ const Singup = () => {
 
 
     const passwordRejex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; const emailRejex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    const handlleSubmite = () => {
+    const handlleSubmite = async() => {
         console.log("submit")
-        
-         if(user.name ==""||user.email==""||user.contact==""||user.pasword==""){
+        const getdata = await axios.get("http://localhost:3000/user")
+        const data = getdata.data.findIndex((e)=>e.email==user.email)
+        console.log(data)
+        if(data!=-1){
+            alert("you'r already sinup ")
+            navigate("/signin")
+        }
+         else if(user.name ==""||user.email==""||user.contact==""||user.pasword==""){
             alert("please fill form")
                  
         }
@@ -59,7 +63,7 @@ const Singup = () => {
             <div className="col6 h-100 m-4">
                 <div  >
 
-                    <div className="mb-3">
+                    <div className="">
                         <label htmlFor="exampleInputPassword1" className="form-label">
                             Name
                         </label>
@@ -70,7 +74,7 @@ const Singup = () => {
                             onChange={(e) => setuser({ ...user, name: e.target.value })}
                         />
                     </div>
-                    <div className="mb-3">
+                    <div className="">
                         <label htmlFor="exampleInputEmail1" className="form-label">
                             Email address
                         </label>
@@ -85,7 +89,7 @@ const Singup = () => {
                             We'll never share your email with anyone else.
                         </div>
                     </div>
-                    <div className="mb-3">
+                    <div className="">
                         <label htmlFor="exampleInputPassword1" className="form-label">
                             contact
                         </label>

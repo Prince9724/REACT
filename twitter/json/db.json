@@ -1,31 +1,9 @@
 {
   "twits": [
-    {
-      "tweet": "hello",
-      "user": "om@gmail.com",
-      "id": "PRlLO-HsMrg"
-    },
-    {
-      "tweet": "hiiiii",
-      "user": "princegondrw123@gmail.com",
-      "id": "8u-sxM-dC5s"
-    }
+    
   ],
   "user": [
-    {
-      "name": "om",
-      "email": "om@gmail.com",
-      "contact": "1234567890",
-      "pasword": "Om@12345",
-      "id": "TddQzuVVINw"
-    },
-    {
-      "name": "prince",
-      "email": "princegondrw123@gmail.com",
-      "contact": "1234567890",
-      "pasword": "Prince@123",
-      "id": "4nMP2GvpN5A"
-    }
+     
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
