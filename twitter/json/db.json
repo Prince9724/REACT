@@ -1,25 +1,20 @@
 {
   "twits": [
     {
-      "tweet": "Heloooooooooo",
+      "tweet": "hello ",
       "user": "princegondrw123@gmail.com",
-      "id": "W5kLXaxulvE"
-    },
-    {
-      "tweet": "Hello I'am Om",
-      "user": "om@gmail.com",
-      "id": "sq4z2IhkxdQ"
+      "id": "iODOXf5gtm0"
     },
     {
       "data": {
-        "tweet": "Hello I'am Om",
-        "user": "om@gmail.com",
-        "id": "sq4z2IhkxdQ"
+        "tweet": "hello ",
+        "user": "princegondrw123@gmail.com",
+        "id": "iODOXf5gtm0"
       },
       "status": 201,
       "statusText": "Created",
       "headers": {
-        "content-length": "79",
+        "content-length": "85",
         "content-type": "application/json"
       },
       "config": {
@@ -52,25 +47,80 @@
         },
         "method": "post",
         "url": "http://localhost:3000/twits",
-        "data": "{\"tweet\":\"Hello I'am Om\",\"user\":\"om@gmail.com\"}",
+        "data": "{\"tweet\":\"hello \",\"user\":\"princegondrw123@gmail.com\"}",
         "allowAbsoluteUrls": true
       },
       "request": {},
-      "tweet": "hello World",
+      "tweet": "Hello i am prince full stack web developer ",
+      "user": "princegondrw123@gmail.com",
+      "id": "ETpo3yZxdvM"
+    },
+    {
+      "tweet": "Hello I Am om ",
       "user": "om@gmail.com",
-      "id": "edyCWSfJWwU"
+      "id": "xcrQwc6ckmE"
+    },
+    {
+      "data": {
+        "tweet": "Hello I Am om ",
+        "user": "om@gmail.com",
+        "id": "xcrQwc6ckmE"
+      },
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "content-length": "80",
+        "content-type": "application/json"
+      },
+      "config": {
+        "transitional": {
+          "silentJSONParsing": true,
+          "forcedJSONParsing": true,
+          "clarifyTimeoutError": false,
+          "legacyInterceptorReqResOrdering": true
+        },
+        "adapter": [
+          "xhr",
+          "http",
+          "fetch"
+        ],
+        "transformRequest": [
+          null
+        ],
+        "transformResponse": [
+          null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {},
+        "headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Content-Type": "application/json"
+        },
+        "method": "post",
+        "url": "http://localhost:3000/twits",
+        "data": "{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\"}",
+        "allowAbsoluteUrls": true
+      },
+      "request": {},
+      "tweet": "heelllo ",
+      "user": "om@gmail.com",
+      "id": "1OlXJDf8Txc"
     },
     {
       "data": {
         "data": {
-          "tweet": "Hello I'am Om",
+          "tweet": "Hello I Am om ",
           "user": "om@gmail.com",
-          "id": "sq4z2IhkxdQ"
+          "id": "xcrQwc6ckmE"
         },
         "status": 201,
         "statusText": "Created",
         "headers": {
-          "content-length": "79",
+          "content-length": "80",
           "content-type": "application/json"
         },
         "config": {
@@ -103,18 +153,18 @@
           },
           "method": "post",
           "url": "http://localhost:3000/twits",
-          "data": "{\"tweet\":\"Hello I'am Om\",\"user\":\"om@gmail.com\"}",
+          "data": "{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\"}",
           "allowAbsoluteUrls": true
         },
         "request": {},
-        "tweet": "hello World",
+        "tweet": "heelllo ",
         "user": "om@gmail.com",
-        "id": "edyCWSfJWwU"
+        "id": "1OlXJDf8Txc"
       },
       "status": 201,
       "statusText": "Created",
       "headers": {
-        "content-length": "1117",
+        "content-length": "1116",
         "content-type": "application/json"
       },
       "config": {
@@ -147,29 +197,354 @@
         },
         "method": "post",
         "url": "http://localhost:3000/twits",
-        "data": "{\"data\":{\"tweet\":\"Hello I'am Om\",\"user\":\"om@gmail.com\",\"id\":\"sq4z2IhkxdQ\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"79\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"tweet\\\":\\\"Hello I'am Om\\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"tweet\":\"hello World\",\"user\":\"om@gmail.com\"}",
+        "data": "{\"data\":{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\",\"id\":\"xcrQwc6ckmE\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"80\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"tweet\":\"heelllo \",\"user\":\"om@gmail.com\"}",
         "allowAbsoluteUrls": true
       },
       "request": {},
-      "tweet": "jai Shree ram ",
       "user": "om@gmail.com",
-      "id": "Eok1SVurm48"
+      "id": "u9e5jF6Y1yA"
+    },
+    {
+      "data": {
+        "data": {
+          "data": {
+            "tweet": "Hello I Am om ",
+            "user": "om@gmail.com",
+            "id": "xcrQwc6ckmE"
+          },
+          "status": 201,
+          "statusText": "Created",
+          "headers": {
+            "content-length": "80",
+            "content-type": "application/json"
+          },
+          "config": {
+            "transitional": {
+              "silentJSONParsing": true,
+              "forcedJSONParsing": true,
+              "clarifyTimeoutError": false,
+              "legacyInterceptorReqResOrdering": true
+            },
+            "adapter": [
+              "xhr",
+              "http",
+              "fetch"
+            ],
+            "transformRequest": [
+              null
+            ],
+            "transformResponse": [
+              null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1,
+            "maxBodyLength": -1,
+            "env": {},
+            "headers": {
+              "Accept": "application/json, text/plain, */*",
+              "Content-Type": "application/json"
+            },
+            "method": "post",
+            "url": "http://localhost:3000/twits",
+            "data": "{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\"}",
+            "allowAbsoluteUrls": true
+          },
+          "request": {},
+          "tweet": "heelllo ",
+          "user": "om@gmail.com",
+          "id": "1OlXJDf8Txc"
+        },
+        "status": 201,
+        "statusText": "Created",
+        "headers": {
+          "content-length": "1116",
+          "content-type": "application/json"
+        },
+        "config": {
+          "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false,
+            "legacyInterceptorReqResOrdering": true
+          },
+          "adapter": [
+            "xhr",
+            "http",
+            "fetch"
+          ],
+          "transformRequest": [
+            null
+          ],
+          "transformResponse": [
+            null
+          ],
+          "timeout": 0,
+          "xsrfCookieName": "XSRF-TOKEN",
+          "xsrfHeaderName": "X-XSRF-TOKEN",
+          "maxContentLength": -1,
+          "maxBodyLength": -1,
+          "env": {},
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+          },
+          "method": "post",
+          "url": "http://localhost:3000/twits",
+          "data": "{\"data\":{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\",\"id\":\"xcrQwc6ckmE\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"80\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"tweet\":\"heelllo \",\"user\":\"om@gmail.com\"}",
+          "allowAbsoluteUrls": true
+        },
+        "request": {},
+        "user": "om@gmail.com",
+        "id": "u9e5jF6Y1yA"
+      },
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "content-length": "3108",
+        "content-type": "application/json"
+      },
+      "config": {
+        "transitional": {
+          "silentJSONParsing": true,
+          "forcedJSONParsing": true,
+          "clarifyTimeoutError": false,
+          "legacyInterceptorReqResOrdering": true
+        },
+        "adapter": [
+          "xhr",
+          "http",
+          "fetch"
+        ],
+        "transformRequest": [
+          null
+        ],
+        "transformResponse": [
+          null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {},
+        "headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Content-Type": "application/json"
+        },
+        "method": "post",
+        "url": "http://localhost:3000/twits",
+        "data": "{\"data\":{\"data\":{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\",\"id\":\"xcrQwc6ckmE\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"80\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"tweet\":\"heelllo \",\"user\":\"om@gmail.com\",\"id\":\"1OlXJDf8Txc\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"1116\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"data\\\":{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\",\\\"id\\\":\\\"xcrQwc6ckmE\\\"},\\\"status\\\":201,\\\"statusText\\\":\\\"Created\\\",\\\"headers\\\":{\\\"content-length\\\":\\\"80\\\",\\\"content-type\\\":\\\"application/json\\\"},\\\"config\\\":{\\\"transitional\\\":{\\\"silentJSONParsing\\\":true,\\\"forcedJSONParsing\\\":true,\\\"clarifyTimeoutError\\\":false,\\\"legacyInterceptorReqResOrdering\\\":true},\\\"adapter\\\":[\\\"xhr\\\",\\\"http\\\",\\\"fetch\\\"],\\\"transformRequest\\\":[null],\\\"transformResponse\\\":[null],\\\"timeout\\\":0,\\\"xsrfCookieName\\\":\\\"XSRF-TOKEN\\\",\\\"xsrfHeaderName\\\":\\\"X-XSRF-TOKEN\\\",\\\"maxContentLength\\\":-1,\\\"maxBodyLength\\\":-1,\\\"env\\\":{},\\\"headers\\\":{\\\"Accept\\\":\\\"application/json, text/plain, */*\\\",\\\"Content-Type\\\":\\\"application/json\\\"},\\\"method\\\":\\\"post\\\",\\\"url\\\":\\\"http://localhost:3000/twits\\\",\\\"data\\\":\\\"{\\\\\\\"tweet\\\\\\\":\\\\\\\"Hello I Am om \\\\\\\",\\\\\\\"user\\\\\\\":\\\\\\\"om@gmail.com\\\\\\\"}\\\",\\\"allowAbsoluteUrls\\\":true},\\\"request\\\":{},\\\"tweet\\\":\\\"heelllo \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"user\":\"om@gmail.com\"}",
+        "allowAbsoluteUrls": true
+      },
+      "request": {},
+      "user": "om@gmail.com",
+      "id": "492oyqGcjp0"
+    },
+    {
+      "data": {
+        "data": {
+          "data": {
+            "data": {
+              "tweet": "Hello I Am om ",
+              "user": "om@gmail.com",
+              "id": "xcrQwc6ckmE"
+            },
+            "status": 201,
+            "statusText": "Created",
+            "headers": {
+              "content-length": "80",
+              "content-type": "application/json"
+            },
+            "config": {
+              "transitional": {
+                "silentJSONParsing": true,
+                "forcedJSONParsing": true,
+                "clarifyTimeoutError": false,
+                "legacyInterceptorReqResOrdering": true
+              },
+              "adapter": [
+                "xhr",
+                "http",
+                "fetch"
+              ],
+              "transformRequest": [
+                null
+              ],
+              "transformResponse": [
+                null
+              ],
+              "timeout": 0,
+              "xsrfCookieName": "XSRF-TOKEN",
+              "xsrfHeaderName": "X-XSRF-TOKEN",
+              "maxContentLength": -1,
+              "maxBodyLength": -1,
+              "env": {},
+              "headers": {
+                "Accept": "application/json, text/plain, */*",
+                "Content-Type": "application/json"
+              },
+              "method": "post",
+              "url": "http://localhost:3000/twits",
+              "data": "{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\"}",
+              "allowAbsoluteUrls": true
+            },
+            "request": {},
+            "tweet": "heelllo ",
+            "user": "om@gmail.com",
+            "id": "1OlXJDf8Txc"
+          },
+          "status": 201,
+          "statusText": "Created",
+          "headers": {
+            "content-length": "1116",
+            "content-type": "application/json"
+          },
+          "config": {
+            "transitional": {
+              "silentJSONParsing": true,
+              "forcedJSONParsing": true,
+              "clarifyTimeoutError": false,
+              "legacyInterceptorReqResOrdering": true
+            },
+            "adapter": [
+              "xhr",
+              "http",
+              "fetch"
+            ],
+            "transformRequest": [
+              null
+            ],
+            "transformResponse": [
+              null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1,
+            "maxBodyLength": -1,
+            "env": {},
+            "headers": {
+              "Accept": "application/json, text/plain, */*",
+              "Content-Type": "application/json"
+            },
+            "method": "post",
+            "url": "http://localhost:3000/twits",
+            "data": "{\"data\":{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\",\"id\":\"xcrQwc6ckmE\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"80\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"tweet\":\"heelllo \",\"user\":\"om@gmail.com\"}",
+            "allowAbsoluteUrls": true
+          },
+          "request": {},
+          "user": "om@gmail.com",
+          "id": "u9e5jF6Y1yA"
+        },
+        "status": 201,
+        "statusText": "Created",
+        "headers": {
+          "content-length": "3108",
+          "content-type": "application/json"
+        },
+        "config": {
+          "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false,
+            "legacyInterceptorReqResOrdering": true
+          },
+          "adapter": [
+            "xhr",
+            "http",
+            "fetch"
+          ],
+          "transformRequest": [
+            null
+          ],
+          "transformResponse": [
+            null
+          ],
+          "timeout": 0,
+          "xsrfCookieName": "XSRF-TOKEN",
+          "xsrfHeaderName": "X-XSRF-TOKEN",
+          "maxContentLength": -1,
+          "maxBodyLength": -1,
+          "env": {},
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+          },
+          "method": "post",
+          "url": "http://localhost:3000/twits",
+          "data": "{\"data\":{\"data\":{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\",\"id\":\"xcrQwc6ckmE\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"80\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"tweet\":\"heelllo \",\"user\":\"om@gmail.com\",\"id\":\"1OlXJDf8Txc\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"1116\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"data\\\":{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\",\\\"id\\\":\\\"xcrQwc6ckmE\\\"},\\\"status\\\":201,\\\"statusText\\\":\\\"Created\\\",\\\"headers\\\":{\\\"content-length\\\":\\\"80\\\",\\\"content-type\\\":\\\"application/json\\\"},\\\"config\\\":{\\\"transitional\\\":{\\\"silentJSONParsing\\\":true,\\\"forcedJSONParsing\\\":true,\\\"clarifyTimeoutError\\\":false,\\\"legacyInterceptorReqResOrdering\\\":true},\\\"adapter\\\":[\\\"xhr\\\",\\\"http\\\",\\\"fetch\\\"],\\\"transformRequest\\\":[null],\\\"transformResponse\\\":[null],\\\"timeout\\\":0,\\\"xsrfCookieName\\\":\\\"XSRF-TOKEN\\\",\\\"xsrfHeaderName\\\":\\\"X-XSRF-TOKEN\\\",\\\"maxContentLength\\\":-1,\\\"maxBodyLength\\\":-1,\\\"env\\\":{},\\\"headers\\\":{\\\"Accept\\\":\\\"application/json, text/plain, */*\\\",\\\"Content-Type\\\":\\\"application/json\\\"},\\\"method\\\":\\\"post\\\",\\\"url\\\":\\\"http://localhost:3000/twits\\\",\\\"data\\\":\\\"{\\\\\\\"tweet\\\\\\\":\\\\\\\"Hello I Am om \\\\\\\",\\\\\\\"user\\\\\\\":\\\\\\\"om@gmail.com\\\\\\\"}\\\",\\\"allowAbsoluteUrls\\\":true},\\\"request\\\":{},\\\"tweet\\\":\\\"heelllo \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"user\":\"om@gmail.com\"}",
+          "allowAbsoluteUrls": true
+        },
+        "request": {},
+        "user": "om@gmail.com",
+        "id": "492oyqGcjp0"
+      },
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "content-length": "7165",
+        "content-type": "application/json"
+      },
+      "config": {
+        "transitional": {
+          "silentJSONParsing": true,
+          "forcedJSONParsing": true,
+          "clarifyTimeoutError": false,
+          "legacyInterceptorReqResOrdering": true
+        },
+        "adapter": [
+          "xhr",
+          "http",
+          "fetch"
+        ],
+        "transformRequest": [
+          null
+        ],
+        "transformResponse": [
+          null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {},
+        "headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Content-Type": "application/json"
+        },
+        "method": "post",
+        "url": "http://localhost:3000/twits",
+        "data": "{\"data\":{\"data\":{\"data\":{\"tweet\":\"Hello I Am om \",\"user\":\"om@gmail.com\",\"id\":\"xcrQwc6ckmE\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"80\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"tweet\":\"heelllo \",\"user\":\"om@gmail.com\",\"id\":\"1OlXJDf8Txc\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"1116\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"data\\\":{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\",\\\"id\\\":\\\"xcrQwc6ckmE\\\"},\\\"status\\\":201,\\\"statusText\\\":\\\"Created\\\",\\\"headers\\\":{\\\"content-length\\\":\\\"80\\\",\\\"content-type\\\":\\\"application/json\\\"},\\\"config\\\":{\\\"transitional\\\":{\\\"silentJSONParsing\\\":true,\\\"forcedJSONParsing\\\":true,\\\"clarifyTimeoutError\\\":false,\\\"legacyInterceptorReqResOrdering\\\":true},\\\"adapter\\\":[\\\"xhr\\\",\\\"http\\\",\\\"fetch\\\"],\\\"transformRequest\\\":[null],\\\"transformResponse\\\":[null],\\\"timeout\\\":0,\\\"xsrfCookieName\\\":\\\"XSRF-TOKEN\\\",\\\"xsrfHeaderName\\\":\\\"X-XSRF-TOKEN\\\",\\\"maxContentLength\\\":-1,\\\"maxBodyLength\\\":-1,\\\"env\\\":{},\\\"headers\\\":{\\\"Accept\\\":\\\"application/json, text/plain, */*\\\",\\\"Content-Type\\\":\\\"application/json\\\"},\\\"method\\\":\\\"post\\\",\\\"url\\\":\\\"http://localhost:3000/twits\\\",\\\"data\\\":\\\"{\\\\\\\"tweet\\\\\\\":\\\\\\\"Hello I Am om \\\\\\\",\\\\\\\"user\\\\\\\":\\\\\\\"om@gmail.com\\\\\\\"}\\\",\\\"allowAbsoluteUrls\\\":true},\\\"request\\\":{},\\\"tweet\\\":\\\"heelllo \\\",\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"user\":\"om@gmail.com\",\"id\":\"u9e5jF6Y1yA\"},\"status\":201,\"statusText\":\"Created\",\"headers\":{\"content-length\":\"3108\",\"content-type\":\"application/json\"},\"config\":{\"transitional\":{\"silentJSONParsing\":true,\"forcedJSONParsing\":true,\"clarifyTimeoutError\":false,\"legacyInterceptorReqResOrdering\":true},\"adapter\":[\"xhr\",\"http\",\"fetch\"],\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1,\"env\":{},\"headers\":{\"Accept\":\"application/json, text/plain, */*\",\"Content-Type\":\"application/json\"},\"method\":\"post\",\"url\":\"http://localhost:3000/twits\",\"data\":\"{\\\"data\\\":{\\\"data\\\":{\\\"tweet\\\":\\\"Hello I Am om \\\",\\\"user\\\":\\\"om@gmail.com\\\",\\\"id\\\":\\\"xcrQwc6ckmE\\\"},\\\"status\\\":201,\\\"statusText\\\":\\\"Created\\\",\\\"headers\\\":{\\\"content-length\\\":\\\"80\\\",\\\"content-type\\\":\\\"application/json\\\"},\\\"config\\\":{\\\"transitional\\\":{\\\"silentJSONParsing\\\":true,\\\"forcedJSONParsing\\\":true,\\\"clarifyTimeoutError\\\":false,\\\"legacyInterceptorReqResOrdering\\\":true},\\\"adapter\\\":[\\\"xhr\\\",\\\"http\\\",\\\"fetch\\\"],\\\"transformRequest\\\":[null],\\\"transformResponse\\\":[null],\\\"timeout\\\":0,\\\"xsrfCookieName\\\":\\\"XSRF-TOKEN\\\",\\\"xsrfHeaderName\\\":\\\"X-XSRF-TOKEN\\\",\\\"maxContentLength\\\":-1,\\\"maxBodyLength\\\":-1,\\\"env\\\":{},\\\"headers\\\":{\\\"Accept\\\":\\\"application/json, text/plain, */*\\\",\\\"Content-Type\\\":\\\"application/json\\\"},\\\"method\\\":\\\"post\\\",\\\"url\\\":\\\"http://localhost:3000/twits\\\",\\\"data\\\":\\\"{\\\\\\\"tweet\\\\\\\":\\\\\\\"Hello I Am om \\\\\\\",\\\\\\\"user\\\\\\\":\\\\\\\"om@gmail.com\\\\\\\"}\\\",\\\"allowAbsoluteUrls\\\":true},\\\"request\\\":{},\\\"tweet\\\":\\\"heelllo \\\",\\\"user\\\":\\\"om@gmail.com\\\",\\\"id\\\":\\\"1OlXJDf8Txc\\\"},\\\"status\\\":201,\\\"statusText\\\":\\\"Created\\\",\\\"headers\\\":{\\\"content-length\\\":\\\"1116\\\",\\\"content-type\\\":\\\"application/json\\\"},\\\"config\\\":{\\\"transitional\\\":{\\\"silentJSONParsing\\\":true,\\\"forcedJSONParsing\\\":true,\\\"clarifyTimeoutError\\\":false,\\\"legacyInterceptorReqResOrdering\\\":true},\\\"adapter\\\":[\\\"xhr\\\",\\\"http\\\",\\\"fetch\\\"],\\\"transformRequest\\\":[null],\\\"transformResponse\\\":[null],\\\"timeout\\\":0,\\\"xsrfCookieName\\\":\\\"XSRF-TOKEN\\\",\\\"xsrfHeaderName\\\":\\\"X-XSRF-TOKEN\\\",\\\"maxContentLength\\\":-1,\\\"maxBodyLength\\\":-1,\\\"env\\\":{},\\\"headers\\\":{\\\"Accept\\\":\\\"application/json, text/plain, */*\\\",\\\"Content-Type\\\":\\\"application/json\\\"},\\\"method\\\":\\\"post\\\",\\\"url\\\":\\\"http://localhost:3000/twits\\\",\\\"data\\\":\\\"{\\\\\\\"data\\\\\\\":{\\\\\\\"tweet\\\\\\\":\\\\\\\"Hello I Am om \\\\\\\",\\\\\\\"user\\\\\\\":\\\\\\\"om@gmail.com\\\\\\\",\\\\\\\"id\\\\\\\":\\\\\\\"xcrQwc6ckmE\\\\\\\"},\\\\\\\"status\\\\\\\":201,\\\\\\\"statusText\\\\\\\":\\\\\\\"Created\\\\\\\",\\\\\\\"headers\\\\\\\":{\\\\\\\"content-length\\\\\\\":\\\\\\\"80\\\\\\\",\\\\\\\"content-type\\\\\\\":\\\\\\\"application/json\\\\\\\"},\\\\\\\"config\\\\\\\":{\\\\\\\"transitional\\\\\\\":{\\\\\\\"silentJSONParsing\\\\\\\":true,\\\\\\\"forcedJSONParsing\\\\\\\":true,\\\\\\\"clarifyTimeoutError\\\\\\\":false,\\\\\\\"legacyInterceptorReqResOrdering\\\\\\\":true},\\\\\\\"adapter\\\\\\\":[\\\\\\\"xhr\\\\\\\",\\\\\\\"http\\\\\\\",\\\\\\\"fetch\\\\\\\"],\\\\\\\"transformRequest\\\\\\\":[null],\\\\\\\"transformResponse\\\\\\\":[null],\\\\\\\"timeout\\\\\\\":0,\\\\\\\"xsrfCookieName\\\\\\\":\\\\\\\"XSRF-TOKEN\\\\\\\",\\\\\\\"xsrfHeaderName\\\\\\\":\\\\\\\"X-XSRF-TOKEN\\\\\\\",\\\\\\\"maxContentLength\\\\\\\":-1,\\\\\\\"maxBodyLength\\\\\\\":-1,\\\\\\\"env\\\\\\\":{},\\\\\\\"headers\\\\\\\":{\\\\\\\"Accept\\\\\\\":\\\\\\\"application/json, text/plain, */*\\\\\\\",\\\\\\\"Content-Type\\\\\\\":\\\\\\\"application/json\\\\\\\"},\\\\\\\"method\\\\\\\":\\\\\\\"post\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"http://localhost:3000/twits\\\\\\\",\\\\\\\"data\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"tweet\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Hello I Am om \\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"user\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"om@gmail.com\\\\\\\\\\\\\\\"}\\\\\\\",\\\\\\\"allowAbsoluteUrls\\\\\\\":true},\\\\\\\"request\\\\\\\":{},\\\\\\\"tweet\\\\\\\":\\\\\\\"heelllo \\\\\\\",\\\\\\\"user\\\\\\\":\\\\\\\"om@gmail.com\\\\\\\"}\\\",\\\"allowAbsoluteUrls\\\":true},\\\"request\\\":{},\\\"user\\\":\\\"om@gmail.com\\\"}\",\"allowAbsoluteUrls\":true},\"request\":{},\"user\":\"om@gmail.com\"}",
+        "allowAbsoluteUrls": true
+      },
+      "request": {},
+      "tweet": "jai shree ram ",
+      "user": "om@gmail.com",
+      "id": "hm_9FbrcKiY"
+    },
+    {
+      "tweet": "hello ",
+      "user": "princegondrw123@gmail.com",
+      "id": "WKKCcvs8y7k"
     }
   ],
   "user": [
     {
       "name": "prince",
       "email": "princegondrw123@gmail.com",
-      "contact": "123567890",
+      "contact": "1234567890",
       "pasword": "Prince@123",
-      "id": "C-9ODAIlRX4"
+      "id": "HYxYfaHfxFI"
     },
     {
       "name": "om",
       "email": "om@gmail.com",
       "contact": "1234567890",
       "pasword": "Om@12345",
-      "id": "3pBA7Bl8bic"
+      "id": "2w_QPrM75Qk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

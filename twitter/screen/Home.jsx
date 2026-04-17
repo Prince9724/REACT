@@ -115,7 +115,7 @@ const Home = () => {
 
                   </div>
 
-                  <div className="mt-1 w-25 border-1 border">
+                  <div className="mt-1 border-1 border">
                     <p className="mb-2 w-100 p-2" style={{ wordWrap: "break-word" }}>{u.tweet}</p>
                   </div>
 
