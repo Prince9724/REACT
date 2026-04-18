@@ -38,7 +38,7 @@ const Todo = () => {
                 <h3 className="todo-text">{e}</h3>
 
                 <div className="actions">
-                  <button className="edit" onClick={() => dispatch(updateTodo(i))}>
+                  <button className="edit" onClick={() => dispatch(updateTodo(text))}>
                     Edit
                   </button>
                   <button className="delete" onClick={() => dispatch(removeTodo(i))}>
