@@ -1,0 +1,85 @@
+/* Full screen center */
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  width: 320px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Number */
+.value {
+  font-size: 70px;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px #fff;
+  animation: glow 1.2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff; }
+  to { text-shadow: 0 0 30px #00f2ff; }
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Button base */
+.btn {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Colors */
+.inc {
+  background: linear-gradient(45deg, #00c853, #69f0ae);
+}
+
+.dec {
+  background: linear-gradient(45deg, #d50000, #ff5252);
+}
+
+.mul {
+  background: linear-gradient(45deg, #2962ff, #82b1ff);
+}
+
+.reset {
+  background: linear-gradient(45deg, #ff6d00, #ffab40);
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Click effect */
+.btn:active {
+  transform: scale(0.95);
+}
