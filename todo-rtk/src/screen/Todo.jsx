@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { addTodo, removeTodo, updateTodo } from '../feature/todoSlice'
+import { useSelector, useDispatch } from 'react-redux'//useselector aur dispatch ko react-redux se import krna hai. 
+import { addTodo, removeTodo, updateTodo } from '../feature/todoSlice'//silce ke ander se import huye hai 
 import './Todo.css'
 
 const Todo = () => {
   const [text, settext] = useState("")
+  const [edit, setedit] = useState({})
   const data = useSelector((state) => state.todo.value)
   const dispatch = useDispatch()
 

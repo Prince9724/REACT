@@ -1,0 +1,48 @@
+ *** what is redux toolkit ? ***
+    ------------------------
+
+
+redux oolkit ek react ki ek official  laibrary hai jo React application me state managment ko simple fast aur efficient bnaane ke liye use hota hai 
+
+redux toolkit ek tool hai jo app ke data o manage krta hai code ko short aur easy bna deta hai.
+
+redux toolkit =>
+   Redux toolkit redux ka official aur recommended tarika hai jisase hum redux logi ko esay aur kam code me likh skte hai 
+
+   redux toolkit ek modern tool hai jo redux ko simple fast aur easy bana deta hai with less code.
+
+redux toolkit ko download krne ke liye terminal ke ander ka command--
+ npm install @redux/toolkit =>(oficial modern library) redux install krne ke liye 
+ npm install react-redux ==>(binds redux to react) redux toolkit ke sath install hoga.
+
+
+   
+   *MVC modern folder*
+ M = modern
+ V = View (UI)
+ C = controler (logic)  
+
+
+
+--MVC folder structure with counter app-- 
+
+redux-counter-app/
+├── src/
+│   ├── app/
+│   │   └── store.js            🔹 Store setup
+│   ├── features/
+│   │   └── counter/
+│   │       ├── counterSlice.js 🔹 Slice for counter state
+│   ├── components/
+│   │   └── Counter.jsx         🔹 UI component
+│   ├── App.js
+│   └── index.js
+
+**Slice**
+slice redux toolkit ka ek part hota hau jo state, reducers aur action ko ek hi jagah define krta hai 
+slice ==> state ka chotta part + uska logic + action
+
+*Action*
+ Action ek object hota hai jo btata hai ki state me kya change karna hai (state ke sath kya krna hai.. )
+
+ 
