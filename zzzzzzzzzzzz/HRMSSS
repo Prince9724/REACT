@@ -12,5 +12,5 @@ like that => naam sallery leave attendence  --> ye sab exel me nahi ek Software 
 
 HRMS(human resource managment system)ek centarlized software hai jo company ke employee lifecycle   ko manage krta hai 
 isme admin login ke through employee add delete update sallery manage  attendence trake aur leave aprrove kiya jaata hai. manager ka role
-restricted hota hai  vo sirf employeeka data attendence aur report dekh skta hai  lekine koi edit nahi kr skta hai 
-
+restricted hota hai  vo sirf employeeka data attendence aur report dekh skta hai  lekine koi edit ya delete nahi kr skta hai 
+Employees apni Profile, leave Request aur attendence check kr skta hai. System 
