@@ -23,7 +23,7 @@ const userSlice = createSlice({//
     extraReducers: (builder) => {
 
         builder.addCase(fetchUser.pending, (state) => {
-            state.status = "Ruko jra sbr kro.."
+            state.status = "Ruko jra sbr kro.. tera net sasta hai kyaa ?"
         }),
             builder.addCase(fetchUser.fulfilled, (state, action) => {
                 state.user = action.payload
