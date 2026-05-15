@@ -1,19 +1,19 @@
 import { CreateSlice, CreateAsyncThunk, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 import TaskApi from '../store/Store.js'
-const fetchTask = createAsyncThunk("task/get", async () => {
+export const fetchTask = createAsyncThunk("task/get", async () => {
     const res = await axios.get(TaskApi);
     return res.data;
 })
-const postTask = createAsyncThunk("task/post", async (data) => {
+export const postTask = createAsyncThunk("task/post", async (data) => {
     const res = await axios.post(TaskApi, data)
     return res.data;
 })
-const updateTask = createAsyncThunk("task/put", async (data) => {
+export const updateTask = createAsyncThunk("task/put", async (data) => {
     const res = await axios.put(TaskApi + "  / " + id, data)
     return res.data
 })
-const deleteTask = createAsyncThunk("task/delete", async (id) => {
+export const deleteTask = createAsyncThunk("task/delete", async (id) => {
     const res = await axios.delete(TaskApi + "  / " + id)
     return res.data;
 })
@@ -22,7 +22,8 @@ const taskSLice = CreateSlice({
     initialState: {
         tasks: [],
         isloading: false,
-        erore: null
+        erore: null,
+        message :""
     },
     extrareducers: (builder) => {
         builder
