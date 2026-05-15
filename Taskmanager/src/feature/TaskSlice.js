@@ -1,9 +1,10 @@
-import { CreateSlice, CreateAsyncThunk, createAsyncThunk } from '@reduxjs/toolkit'
-import axios from 'axios'
-import TaskApi from '../store/Store.js'
-export const fetchTask = createAsyncThunk("task/get", async () => {
-    const res = await axios.get(TaskApi);
-    return res.data;
+import { CreateSlice, createAsyncThunk } from '@reduxjs/toolkit'//reduxjs/toolkit se import hua hai 
+import axios from 'axios'//axios npm se install kr ke import kiya hai 
+import TaskApi from '../utils/Api.js' //taskApi ek api url hai jise api.js me default export kiya hai 
+export const fetchTask = createAsyncThunk("task/get", async () => { //ex variable hai jisko named export kiya hai aur ek unic naam bhi diya hai 
+  //yha pr keval data get hoga api url se data get hoga   
+    const res = await axios.get(TaskApi);   
+    return res.data; //agr succesful api se data get ho gya to yha se res.data return hoga
 })
 export const postTask = createAsyncThunk("task/post", async (data) => {
     const res = await axios.post(TaskApi, data)
@@ -70,4 +71,5 @@ const taskSLice = CreateSlice({
             })
     }
 })
-export default taskSLice.reducer;
+export default taskSLice.reducer;//ye hmaara taskReducer hai jisko mai default export kiya hai. isliye maine store me iska 
+//name change kr diya hai.   
