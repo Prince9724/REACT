@@ -10,12 +10,15 @@ export const postTask = createAsyncThunk("task/post", async (data) => { // postT
     const res = await axios.post(TaskApi, data)
     return res.data;
 })
-export const updateTask = createAsyncThunk("task/put", async (data ,id) => {
-    const res = await axios.put({TaskApi} + "  / " + id, data)
+export const updateTask = createAsyncThunk("task/put", async ({data ,id}) => {
+   const res = await axios.put(
+      `${TaskApi}/${id}`,
+      data
+    )
     return res.data
 })
-export const deleteTask = createAsyncThunk("task/delete", async (id) => {
-    const res = await axios.delete(TaskApi + "  / " + id)
+export const deleteTask = createAsyncThunk("task/delete", async ({id}) => {
+    const res = await axios.delete(`${TaskApi}/${id}`)
     return res.data;
 })
 const taskSLice = createSlice({
@@ -44,6 +47,7 @@ const taskSLice = createSlice({
             })
             .addCase(postTask.fulfilled, (state, action) => {
                 state.isloading = "success.."
+                state.tasks.push(action.payload)
             })
             .addCase(postTask.rejected, (state, action) => {
                 state.isloading = "failed"
