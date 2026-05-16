@@ -6,7 +6,7 @@ export const fetchTask = createAsyncThunk("task/get", async () => { //ex variabl
     const res = await axios.get(TaskApi);   
     return res.data; //agr succesful api se data get ho gya to yha se res.data return hoga
 })
-export const postTask = createAsyncThunk("task/post", async (data) => { // 
+export const postTask = createAsyncThunk("task/post", async (data) => { // postTask
     const res = await axios.post(TaskApi, data)
     return res.data;
 })
