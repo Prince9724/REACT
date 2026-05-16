@@ -1,75 +1,76 @@
-import { CreateSlice, createAsyncThunk } from '@reduxjs/toolkit'//reduxjs/toolkit se import hua hai 
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'//reduxjs/toolkit se import hua hai 
 import axios from 'axios'//axios npm se install kr ke import kiya hai 
-import TaskApi from '../utils/Api.js' //taskApi ek api url hai jise api.js me default export kiya hai 
+import { TaskApi } from '../utils/Api.js' //taskApi ek api url hai jise api.js me default export kiya hai 
 export const fetchTask = createAsyncThunk("task/get", async () => { //ex variable hai jisko named export kiya hai aur ek unic naam bhi diya hai 
   //yha pr keval data get hoga api url se data get hoga   
     const res = await axios.get(TaskApi);   
     return res.data; //agr succesful api se data get ho gya to yha se res.data return hoga
 })
-export const postTask = createAsyncThunk("task/post", async (data) => { // postTask
+export const postTask = createAsyncThunk("task/post", async (data) => { // postTask ko bhi named export kiya hai 
     const res = await axios.post(TaskApi, data)
     return res.data;
 })
-export const updateTask = createAsyncThunk("task/put", async (data) => {
-    const res = await axios.put(TaskApi + "  / " + id, data)
+export const updateTask = createAsyncThunk("task/put", async (data ,id) => {
+    const res = await axios.put({TaskApi} + "  / " + id, data)
     return res.data
 })
 export const deleteTask = createAsyncThunk("task/delete", async (id) => {
     const res = await axios.delete(TaskApi + "  / " + id)
     return res.data;
 })
-const taskSLice = CreateSlice({
+const taskSLice = createSlice({
     name: "task",
     initialState: {
         tasks: [],
         isloading: false,
-        erore: null,
+        error: null,
         message :""
     },
-    extrareducers: (builder) => {
+    extraReducers: (builder) => {
         builder
-            .addcase(fetchTask.pending, (state, action) => {
+            .addCase(fetchTask.pending, (state, action) => {
                 state.isloading = "ruko jara sbr kro.. "
             })
-            .addcase(fetchTask.fulfilled, (state, action) => {
+            .addCase(fetchTask.fulfilled, (state, action) => {
                 state.tasks = action.payload
                 state.isloading = "Task added succesfull "
             })
-            .addcase(fetchTask.rejected, (state, action) => {
+            .addCase(fetchTask.rejected, (state, action) => {
                 state.isloading = "failed"
-                state.erore = action.erore;
+                state.error = action.error;
             })
-            .addcase(postTask.pending, (state, action) => {
+            .addCase(postTask.pending, (state, action) => {
                 state.isloading = " loading..."
             })
-            .addcase(postTask.fulfilled, (state, action) => {
+            .addCase(postTask.fulfilled, (state, action) => {
                 state.isloading = "success.."
             })
-            .addcase(postTask.rejected, (state, action) => {
+            .addCase(postTask.rejected, (state, action) => {
                 state.isloading = "failed"
-                state.erore = action.erore.message;
+                state.error = action.error.message;
             })
-            .addcase(updateTask.pending, (state, action) => {
+            .addCase(updateTask.pending, (state, action) => {
                 state.isloading = " loading..."
             })
-            .addcase(updateTask.fulfilled, (state, action) => {
+            .addCase(updateTask.fulfilled, (state, action) => {
                 state.isloading = "success.."
             })
-            .addcase(updateTask.rejected, (state, action) => {
+            .addCase(updateTask.rejected, (state, action) => {
                 state.isloading = "failed"
-                state.erore = action.erore.message;
+                state.error = action.error.message;
             })
-            .addcase(deleteTask.pending, (state, action) => {
+            .addCase(deleteTask.pending, (state, action) => {
                 state.isloading = " loading..."
             })
-            .addcase(deleteTask.fulfilled, (state, action) => {
+            .addCase(deleteTask.fulfilled, (state, action) => {
                 state.isloading = "success.."
             })
-            .addcase(deleteTask.rejected, (state, action) => {
+            .addCase(deleteTask.rejected, (state, action) => {
                 state.isloading = "failed"
-                state.erore = action.erore.message;
+                state.error = action.error.message;
             })
     }
 })
 export default taskSLice.reducer;//ye hmaara taskReducer hai jisko mai default export kiya hai. isliye maine store me iska 
 //name change kr diya hai.   
+
