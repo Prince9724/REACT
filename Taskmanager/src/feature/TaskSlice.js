@@ -7,7 +7,7 @@ export const fetchTask = createAsyncThunk("task/get", async () => { //ex variabl
     return res.data; //agr succesful api se data get ho gya to yha se res.data return hoga
 })
 export const postTask = createAsyncThunk("task/post", async (data) => { // postTask ko bhi named export kiya hai 
-    const res = await axios.post(TaskApi, data)
+    const res = await axios.post(TaskApi, {title:"hello"})
     return res.data;
 })
 export const updateTask = createAsyncThunk("task/put", async ({data ,id}) => {
@@ -50,6 +50,7 @@ const taskSLice = createSlice({
                 state.tasks.push(action.payload)
             })
             .addCase(postTask.rejected, (state, action) => {
+                console.log(action.error.message)
                 state.isloading = "failed"
                 state.error = action.error.message;
             })
