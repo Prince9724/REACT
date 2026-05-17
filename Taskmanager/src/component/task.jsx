@@ -23,6 +23,9 @@ const Task = () => {//ek functon hai task
       description: ""
     })
   }
+  const handleEdit =()=>{
+
+  }
   return (
     <div className='container d-flex flex-column align-items-center justify-content-center'>
       <div className='box pt-5 d-flex  gap-3 '>
@@ -30,12 +33,20 @@ const Task = () => {//ek functon hai task
         <input type="text" value={manager.description || ""} onChange={(e) => setmanager({ ...manager, description: e.target.value })} />
         <button className='btn btn-outline-secondary' onClick={handleAdd}>Add</button>
       </div>
-      <div className='w-100'>
+      <div className='w-100 d-flex flex-wrap justify-content-center'>
         {
           tasks?.map((task) => (
-            <div className='w-100 border border-3' key={task.id}>
+            <div className='w-25 border border-3 m-3 p-3' key={task.id}>
               <h4>{task.title}</h4>
               <p>{task.description}</p>
+              <div>
+                <button  className='btn btn-outline-warning mx-2'>Edit</button>
+                <button onClick={()=>{
+                  dispatch(deleteTask({
+                    id:task.id
+                  }))
+                }} className='btn btn-outline-danger'>Delete</button>
+              </div>
             </div>
             
           ))
