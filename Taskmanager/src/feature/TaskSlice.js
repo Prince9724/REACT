@@ -2,22 +2,37 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'//reduxjs/toolki
 import axios from 'axios'//axios npm se install kr ke import kiya hai 
 import { TaskApi } from '../utils/Api.js' //taskApi ek api url hai jise api.js me default export kiya hai 
 export const fetchTask = createAsyncThunk("task/get", async () => { //ex variable hai jisko named export kiya hai aur ek unic naam bhi diya hai 
-  //yha pr keval data get hoga api url se data get hoga   
-    const res = await axios.get(TaskApi);   
+    //yha pr keval data get hoga api url se data get hoga   
+    const res = await axios.get(TaskApi);
     return res.data; //agr succesful api se data get ho gya to yha se res.data return hoga
 })
-export const postTask = createAsyncThunk("task/post", async (data) => { // postTask ko bhi named export kiya hai 
-    const res = await axios.post(TaskApi, {title:"hello"})
-    return res.data;
-})
-export const updateTask = createAsyncThunk("task/put", async ({data ,id}) => {
-   const res = await axios.put(
-      `${TaskApi}/${id}`,
-      data
+// export const postTask = createAsyncThunk("task/post", async (data) => { // postTask ko bhi named export kiya hai 
+//     const res = await axios.post(TaskApi, {title:"hello"})
+//     return res.data;
+// })
+export const postTask =
+    createAsyncThunk(
+
+        "task/post",
+
+        async (data) => {
+
+            const res =
+                await axios.post(
+                    TaskApi,
+                    data
+                )
+
+            return res.data
+        })
+export const updateTask = createAsyncThunk("task/put", async ({ data, id }) => {
+    const res = await axios.put(
+        `${TaskApi}/${id}`,
+        data
     )
     return res.data
 })
-export const deleteTask = createAsyncThunk("task/delete", async ({id}) => {
+export const deleteTask = createAsyncThunk("task/delete", async ({ id }) => {
     const res = await axios.delete(`${TaskApi}/${id}`)
     return res.data;
 })
@@ -27,7 +42,7 @@ const taskSLice = createSlice({
         tasks: [],
         isloading: false,
         error: null,
-        message :""
+        message: ""
     },
     extraReducers: (builder) => {
         builder
