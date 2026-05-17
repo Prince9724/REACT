@@ -36,4 +36,4 @@ const Task = () => {
   )
 }
 
-export default Task // default
+export default Task // default export
