@@ -36,4 +36,4 @@ const Task = () => {
   )
 }
 
-export default Task // defail
+export default Task // default
