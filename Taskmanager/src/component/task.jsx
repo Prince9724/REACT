@@ -20,10 +20,12 @@ const Task = () => {//ek functon hai task
     console.log("helo")
     setmanager({
       title: "",
-      description: ""
+      description: "",
+      priority:"low",
+      status:"pending"
     })
   }
-  const handleEdit =()=>{
+  const handleEdit = () => {
 
   }
   return (
@@ -31,24 +33,30 @@ const Task = () => {//ek functon hai task
       <div className='box pt-5 d-flex  gap-3 '>
         <input type="text" value={manager.title || ""} onChange={(e) => setmanager({ ...manager, title: e.target.value })} />
         <input type="text" value={manager.description || ""} onChange={(e) => setmanager({ ...manager, description: e.target.value })} />
+        <select class="form-select"  value={manager.priority || ""} onChange={(e)=>setmanager({...manager,priority:e.target.value})} aria-label="Default select example">
+          <option selected>Select your Priority</option>
+          <option value="1">Low</option>
+          <option value="2">Medium</option>  
+          <option value="3">High</option>
+        </select>
         <button className='btn btn-outline-secondary' onClick={handleAdd}>Add</button>
       </div>
       <div className='w-100 d-flex flex-wrap justify-content-center'>
         {
           tasks?.map((task) => (
-            <div className='w-25 border border-3 m-3 p-3' key={task.id}>
+            <div className='w-25 border border-3 m-3 p-3 rounded-3' key={task.id}>
               <h4>{task.title}</h4>
               <p>{task.description}</p>
               <div>
-                <button  className='btn btn-outline-warning mx-2'>Edit</button>
-                <button onClick={()=>{
+                <button className='btn btn-outline-warning mx-2'>Edit</button>
+                <button onClick={() => {
                   dispatch(deleteTask({
-                    id:task.id
+                    id: task.id
                   }))
                 }} className='btn btn-outline-danger'>Delete</button>
               </div>
             </div>
-            
+
           ))
         }
       </div>
