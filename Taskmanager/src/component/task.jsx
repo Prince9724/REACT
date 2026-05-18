@@ -11,35 +11,52 @@ const Task = () => {//ek functon hai task
   }, [])
   const handleAdd = () => {//handleAdd ek function bnaya hai jiske ander maine button click ka feature add kiya hai 
     if (
-      !manager.title ||
+      !manager.title ||//agar title aur desctription fill nahi hai to usko ek ek alert box dikhega 
       !manager.description
     ) {
-      return alert("Fill all fields")
+      return alert("Fill all fields")//agar input dono khaali hai to user ko ye allert box dikhega 
     }
+    
     dispatch(postTask(manager))//button click hote hi api ke ander jo task hai vo post h jaayega 
     console.log("helo")
     setmanager({
       title: "",
       description: "",
-      priority:"low",
-      status:"pending"
+      priority: "low",
+      status: "pending"
     })
   }
-  const handleEdit = () => {
-
+  const handleUpdate =()=>{
+    
+  }
+  //todo -> edit click krne pr old data input me  aana chahiye user kuch change krega aur fir jab update krega to api call hona chahiye 
+  //redux state update uske badd ui change ho jaaana chahiye 
+  const handleEdit = (task) => {
+    setmanager(task)
   }
   return (
     <div className='container d-flex flex-column align-items-center justify-content-center'>
       <div className='box pt-5 d-flex  gap-3 '>
         <input type="text" value={manager.title || ""} onChange={(e) => setmanager({ ...manager, title: e.target.value })} />
         <input type="text" value={manager.description || ""} onChange={(e) => setmanager({ ...manager, description: e.target.value })} />
-        <select class="form-select"  value={manager.priority || ""} onChange={(e)=>setmanager({...manager,priority:e.target.value})} aria-label="Default select example">
-          <option selected>Select your Priority</option>
-          <option value="1">Low</option>
-          <option value="2">Medium</option>  
-          <option value="3">High</option>
+        <select
+          className="form-select"
+          value={manager.priority || ""}
+          onChange={(e) =>
+            setmanager({
+              ...manager,
+              priority: e.target.value
+            })
+          }
+        >
+          <option value="">Select your Priority</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
         </select>
         <button className='btn btn-outline-secondary' onClick={handleAdd}>Add</button>
+        <button className='btn btn-outline-secondary' onClick={handleUpdate}>update</button>
+
       </div>
       <div className='w-100 d-flex flex-wrap justify-content-center'>
         {
@@ -48,11 +65,14 @@ const Task = () => {//ek functon hai task
               <h4>{task.title}</h4>
               <p>{task.description}</p>
               <div>
-                <button className='btn btn-outline-warning mx-2'>Edit</button>
+                <button className='btn btn-outline-warning mx-2' onClick={() => [
+                  handleEdit(task)
+                ]}>Edit</button>
                 <button onClick={() => {
                   dispatch(deleteTask({
                     id: task.id
                   }))
+                  dispatch(fetchTask())
                 }} className='btn btn-outline-danger'>Delete</button>
               </div>
             </div>
