@@ -85,3 +85,14 @@ const Task = () => {//ek functon hai task
 }
 
 export default Task // default export kiya hai 
+
+
+///id + tod important hai 
+//only id in delete 
+//api -thunk - return - action- action.payload -> state,todos (initialstate ka data hai )
+//gettodo ==> duspatch (gettodo()call)-> thunk function -> api call - res.data return->full fillecd(extrareducer)-> state.todos= action.payload -> todos(initialstate)-> automativc - useselector ke throw ui me update ho gya 
+//pahle ham adcase ke ander id naam ki variabl ebnaayenge aur uske ander todo ki id stor krenge iske baad 
+// const index= state.todo.findindex((todo))=> todo.id == id );isko return krke index name ki variabvle ke ander store kr rhe hai
+//state.todos[index]= action.payload;
+// ye update ho jaayega 
+
