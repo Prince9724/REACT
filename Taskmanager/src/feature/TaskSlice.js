@@ -1,6 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'//reduxjs/toolkit se import hua hai 
 import axios from 'axios'//axios npm se install kr ke import kiya hai 
 import { TaskApi } from '../utils/Api.js' //taskApi ek api url hai jise api.js me default export kiya hai 
+import Task from '../component/task.jsx'
+
+export const postTask =
+    createAsyncThunk("task/post",async (data) => {
+        const res =await axios.post( TaskApi,data)
+            return res.data//agar data sucesfull post ho rha hai yo res.data return ho jaayega. 
+        })
+
 export const fetchTask = createAsyncThunk("task/get", async () => { //ex variable hai jisko named export kiya hai aur ek unic naam bhi diya hai 
     //yha pr keval data get hoga api url se data get hoga   
     const res = await axios.get(TaskApi);
@@ -10,26 +18,9 @@ export const fetchTask = createAsyncThunk("task/get", async () => { //ex variabl
 //     const res = await axios.post(TaskApi, {title:"hello"})
 //     return res.data;
 // })
-export const postTask =
-    createAsyncThunk(
 
-        "task/post",
-
-        async (data) => {
-
-            const res =
-                await axios.post(//data ko api me post krne ke liye 
-                    TaskApi,
-                    data
-                )
-
-            return res.data//agar data sucesfull post ho rha hai yo res.data return ho jaayega. 
-        })
 export const updateTask = createAsyncThunk("task/put", async ({ data, id }) => {
-    const res = await axios.put(
-        `${TaskApi}/${id}`,
-        data
-    )
+    const res = await axios.put(TaskApi+task)
     return res.data
 })
 export const deleteTask = createAsyncThunk("task/delete", async ({ id }) => {
