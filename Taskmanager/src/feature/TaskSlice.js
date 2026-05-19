@@ -18,12 +18,12 @@ export const postTask =
         async (data) => {
 
             const res =
-                await axios.post(
+                await axios.post(//data ko api me post krne ke liye 
                     TaskApi,
                     data
                 )
 
-            return res.data
+            return res.data//agar data sucesfull post ho rha hai yo res.data return ho jaayega. 
         })
 export const updateTask = createAsyncThunk("task/put", async ({ data, id }) => {
     const res = await axios.put(
