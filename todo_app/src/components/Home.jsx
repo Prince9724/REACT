@@ -4,7 +4,7 @@ import store from '../store/store'
 const Home = () => {
   return (
     <div>
-
+      Home
     </div>
   )
 }
