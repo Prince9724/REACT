@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk}from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk}from '@reduxjs/toolkit'//import kiya hai rtk me se inko 
 import axios from 'axios'
 
 export const addTodo = createAsyncThunk("add/todo",async (todo)=>{
