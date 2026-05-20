@@ -3,8 +3,8 @@ import {useDispatch, useSelector}from 'react-redux'
 import store from '../store/store'
 const Home = () => {
   return (
-    <div>
-      Home
+    <div className='container'>
+      
     </div>
   )
 }
