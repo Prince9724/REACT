@@ -9,4 +9,4 @@ const Home = () => {
   )
 }
 
-export default Home//hoemjsx ko default export kiya hai 
+export default Home
