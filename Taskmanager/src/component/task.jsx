@@ -16,7 +16,7 @@ const Task = () => {//ek functon hai task
     ) {
       return alert("Fill all fields")//agar input dono khaali hai to user ko ye allert box dikhega 
     }
-    
+
     dispatch(postTask(manager))//button click hote hi api ke ander jo task hai vo post h jaayega 
     console.log("helo")
     setmanager({
@@ -26,8 +26,8 @@ const Task = () => {//ek functon hai task
       status: "pending"
     })
   }
-  const handleUpdate =()=>{
-    
+  const handleUpdate = () => {
+
   }
   //todo -> edit click krne pr old data input me  aana chahiye user kuch change krega aur fir jab update krega to api call hona chahiye 
   //redux state update uske badd ui change ho jaaana chahiye 
@@ -65,9 +65,9 @@ const Task = () => {//ek functon hai task
               <h4>{task.title}</h4>
               <p>{task.description}</p>
               <div>
-                <button className='btn btn-outline-warning mx-2' onClick={() => [
+                <button className='btn btn-outline-warning mx-2' onClick={() => {
                   handleEdit(task)
-                ]}>Edit</button>
+                }}>Edit</button>
                 <button onClick={() => {
                   dispatch(deleteTask({
                     id: task.id
@@ -87,11 +87,11 @@ const Task = () => {//ek functon hai task
 export default Task // default export kiya hai 
 
 
-///id + tod important hai 
-//only id in delete 
+///id + tod important hai
+//only id in delete
 //api -thunk - return - action- action.payload -> state,todos (initialstate ka data hai )
-//gettodo ==> duspatch (gettodo()call)-> thunk function -> api call - res.data return->full fillecd(extrareducer)-> state.todos= action.payload -> todos(initialstate)-> automativc - useselector ke throw ui me update ho gya 
-//pahle ham adcase ke ander id naam ki variabl ebnaayenge aur uske ander todo ki id stor krenge iske baad 
+//gettodo ==> duspatch (gettodo()call)-> thunk function -> api call - res.data return->full fillecd(extrareducer)-> state.todos= action.payload -> todos(initialstate)-> automativc - useselector ke throw ui me update ho gya
+//pahle ham adcase ke ander id naam ki variabl ebnaayenge aur uske ander todo ki id stor krenge iske baad
 // const index= state.todo.findindex((todo))=> todo.id == id );isko return krke index name ki variabvle ke ander store kr rhe hai
 //state.todos[index]= action.payload;
 // ye update ho jaayega 

@@ -2,20 +2,27 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'//import kiya ha
 import axios from 'axios'
 
 export const addTodo = createAsyncThunk("add/todo", async (todo) => {
-    const res = await axios.post("http://localhost:3000/todos", todo)
+    const res = await axios.post("http://localhost:3000/    todos", todo)
     return res.data;
 })
 export const getTodo = createAsyncThunk("get/todo", async () => {
     const res = await axios.get("http://localhost:3000/todos");
     return res.data;
 })
-export const updateTodo = createAsyncThunk("update/todo", async (todo) => {
-    const res = await axios.put("http://localhost:3000/todos" + todo.id, todo)
-    return res.data;
-})
-export const deleteTodo = createAsyncThunk("delete/todo", async (id) => {
-    const res = await axios.delete("http://localhost:3000/todos" + id);
+export const updateTodo = createAsyncThunk(
+  "update/todo",
+  async (todo) => {
+    const res = await axios.put(
+      `http://localhost:3000/todos/${todo.id}`,
+      todo
+    )
+
     return res.data
+  }
+)
+export const deleteTodo = createAsyncThunk("delete/todo", async (id) => {
+    const res = await axios.delete(`http://localhost:3000/todos/${id}`);
+    return id;
 })
 
 const todoSlice = createSlice({
@@ -62,7 +69,9 @@ const todoSlice = createSlice({
                     state.isloading = action.error.message
             })
             .addCase(deleteTodo.fulfilled, (state, action) => {
-                state.todos = action.payload;
+               state.todos = state.todos.filter((todo)=>{
+                todo.id!=action.payload
+               })
             })
             .addCase(deleteTodo.pending, (state, action) => {
                 state.isloading = "aa rha hai wait..."
