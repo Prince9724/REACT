@@ -61,7 +61,9 @@ const Task = () => {//ek functon hai task
       <div className='w-100 d-flex flex-wrap justify-content-center'>
         {
           tasks?.map((task) => (
-            <div className='w-25 border border-3 m-3 p-3 rounded-3' key={task.id}>
+            <div className={`w-25 border border-2 m-3 p-3
+              ${task.priority==low?"border-succes":"border-dander"
+            ||task.priority==high?"":""} rounded-3`} key={task.id}>
               <h4>{task.title}</h4>
               <p>{task.description}</p>
               <div>
