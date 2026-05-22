@@ -15,7 +15,7 @@ export const updateTodo = createAsyncThunk(
     const res = await axios.put(
       `http://localhost:3000/todos/${todo.id}`,
       todo
-    )
+    )   
 
     return res.data
   }

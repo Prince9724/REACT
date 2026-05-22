@@ -19,8 +19,8 @@ export const fetchTask = createAsyncThunk("task/get", async () => { //ex variabl
 //     return res.data;
 // })
 
-export const updateTask = createAsyncThunk("task/put", async ({ data, id }) => {
-    const res = await axios.put(TaskApi+task)
+export const updateTask = createAsyncThunk("task/put", async ( task) => {
+    const res = await axios.put(TaskApi+""+task.id,task)
     return res.data
 })
 export const deleteTask = createAsyncThunk("task/delete", async ({ id }) => {

@@ -6,20 +6,30 @@ const Task = () => {//ek functon hai task
   const { tasks, isloading, error, message } = useSelector((state) => state.task);
   //ye hme state deta hai aur us state se hme ek ek task chahiye.
   const [manager, setmanager] = useState({});//ye maine usestate bnaaya hai aur iske throw maine data ko post kiya hai 
+  const [filter, setfilter] = useState("");
   useEffect(() => {//useeffect ke ander dispatch ko call kiya hai 
     dispatch(fetchTask());//dispatch me fetchtask ko call kiya hai 
   }, [])
-  const handleAdd = () => {//handleAdd ek function bnaya hai jiske ander maine button click ka feature add kiya hai 
+  const handleAdd = async () => {//handleAdd ek function bnaya hai jiske ander maine button click ka feature add kiya hai 
     if (
       !manager.title ||//agar title aur desctription fill nahi hai to usko ek ek alert box dikhega 
       !manager.description
     ) {
       return alert("Fill all fields")//agar input dono khaali hai to user ko ye allert box dikhega 
     }
-
+     if (manager.id) {
+    
+          await dispatch(updateTodo(manager))
+    
+        } else {
+    
+          await dispatch(addTodo(manager))
+    
+        }
     dispatch(postTask(manager))//button click hote hi api ke ander jo task hai vo post h jaayega 
     console.log("helo")
     setmanager({
+      
       title: "",
       description: "",
       priority: "low",
@@ -54,42 +64,51 @@ const Task = () => {//ek functon hai task
           <option value="medium">Medium</option>
           <option value="high">High</option>
         </select>
-        <button className='btn btn-outline-secondary' onClick={handleAdd}>Add</button>
-        <button className='btn btn-outline-secondary' onClick={handleUpdate}>update</button>
-
+        <button className='btn btn-outline-secondary' onClick={handleAdd}>  {manager.id ? "Update" : "Add"}</button>
+        {/* <button className='btn btn-outline-secondary' onClick={handleUpdate}>update</button> */}
+        <select
+          className="form-select" value={filter} onChange={(e) => setfilter(e.target.value)}>
+          <option value="">ALL</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
       </div>
       <div className='w-100 d-flex flex-wrap justify-content-center'>
         {
-          tasks?.map((task) => (
-            <div className={`w-25 border border-2 m-3 p-3
-              ${task.priority=="low"?"border-success":
-            task.priority=="high"?"border-danger":
-            task.priority=="medium"?"border-warning":"border"} rounded-3`} key={task.id}>
-              <h4>{task.title}</h4>
-              <p>{task.description}</p>
-              <div>
-                <button className='btn btn-outline-warning mx-2' onClick={() => {
-                  handleEdit(task)
-                }}>Edit</button>
-                <button onClick={() => {
-                  dispatch(deleteTask({
-                    id: task.id
-                  }))
-                  dispatch(fetchTask())
-                }} className='btn btn-outline-danger'>Delete</button>
+          tasks?.filter((task) =>
+            filter === "" ? true : task.priority === filter
+          )
+            ?.map((task) => (
+              <div className={`w-25 border border-2 m-3 p-3
+              ${task.priority == "low" ? "border-success" :
+                  task.priority == "high" ? "border-danger" :
+                    task.priority == "medium" ? "border-warning" : "border"} rounded-3`} key={task.id}>
+                <h4>{task.title}</h4>
+                <p>{task.description}</p>
+                <div>
+                  <button className='btn btn-outline-warning mx-2' onClick={() => {
+                    handleEdit(task)
+                  }}>Edit</button>
+                  <button onClick={() => {
+                    dispatch(deleteTask({
+                      id: task.id
+                    }))
+                    dispatch(fetchTask())
+                  }} className='btn btn-outline-danger'>Delete</button>
+                </div>
               </div>
-            </div>
 
-          ))
+            ))
         }
-      </div>      
+      </div>
     </div>
   )
 }
 
 export default Task // default export kiya hai 
 
-//todo summary 
+//todo summary
 ///id + tod important hai
 //only id in delete
 //api -thunk - return - action- action.payload -> state,todos (initialstate ka data hai )
