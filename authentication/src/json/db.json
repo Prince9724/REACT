@@ -4,99 +4,22 @@
       "name": "prince",
       "email": "princegondrw123@gmail.com",
       "contact": "9724672317",
-      "pasword": "1234",
-      "id": 4
-    },
-    {
-      "name": "prince",
-      "email": "princegondrw123@gmail.com",
-      "contact": "9724672317",
-      "pasword": "1234",
-      "id": 5
+      "password": "Prince@123",
+      "id": 1
     },
     {
       "name": "om",
       "email": "om@gmail.com",
-      "contact": "1000000001",
-      "pasword": "1234",
-      "id": 6
-    },
-    {
-      "name": "om",
-      "email": "om@gmail.com",
-      "contact": "1000000001",
-      "pasword": "1234",
-      "id": 7
-    },
-    {
-      "name": "om",
-      "email": "om@gmail.com",
-      "contact": "9724672317",
-      "pasword": "1234",
-      "id": 8
+      "contact": "0000000000",
+      "password": "Om@1234",
+      "id": 2
     },
     {
       "name": "ayush",
       "email": "amit@gmail.com",
-      "contact": "1000000001",
-      "pasword": "1234",
-      "id": 9
-    },
-    {
-      "name": "ayush",
-      "email": "amit@gmail.com",
-      "contact": "1000000001",
-      "pasword": "1234",
-      "id": 10
-    },
-    {
-      "name": "qwerty",
-      "email": "amit@gmail.com",
-      "contact": "9724672317",
-      "pasword": "1234",
-      "id": 11
-    },
-    {
-      "name": "prince",
-      "email": "princegondrw123@gmail.com",
-      "contact": "9724672317",
-      "password": "1234",
-      "id": 12
-    },
-    {
-      "name": "prince",
-      "email": "princegondrw123@gmail.com",
-      "contact": "9724672317",
-      "password": "1234",
-      "id": 13
-    },
-    {
-      "name": "prince",
-      "email": "princegondrw123@gmail.com",
-      "contact": "9724672317",
-      "password": "1234",
-      "id": 14
-    },
-    {
-      "name": "prince",
-      "email": "princegondrw123@gmail.com",
-      "contact": "9724672317",
-      "password": "1234",
-      "id": 15
-    },
-    {
-      "name": "prince",
-      "email": "princegondrw123@gmail.com",
-      "contact": "9724672317",
-      "password": "1234",
-      "id": 16
-    },
-    {
-      "name": "aaaa",
-      "email": "amit@gmail.com",
-      "contact": "1000000001",
-      "pasword": "1234",
-      "id": 17
+      "contact": "9000000007",
+      "password": "Ayush@123",
+      "id": 3
     }
   ]
 }

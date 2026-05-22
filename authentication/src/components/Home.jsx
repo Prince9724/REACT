@@ -18,7 +18,12 @@ const Home = () => {
     useEffect(() => {
         dispatch(getUser())
     }, [dispatch])
-
+    const loginUser =
+        JSON.parse(
+            localStorage.getItem(
+                "user"
+            )
+        )
     return (
 
         <div className='container mt-5'>
@@ -37,30 +42,43 @@ const Home = () => {
 
                     :
 
-                    users.map(
-                        (user) => (
+                    users.map((user) => {
+
+                        const active =
+
+                            loginUser?.email
+                            ===
+
+                            user.email
+
+                        return (
 
                             <div
                                 key={user.id}
-                                className='border p-3 mb-3'
+
+                                className={
+                                    active?"border p-5 mb-4 shadow bg-primary text-white rounded" :"border p-2 mb-2"
+                                }
                             >
-
-                                <h5>
+                                <h4>
                                     {user.name}
-                                </h5>
-
+                                </h4>
                                 <p>
                                     {user.email}
                                 </p>
-
                                 <p>
                                     {user.contact}
                                 </p>
-
+                                {
+                                    active
+                                    &&
+                                    <h5>
+                                        Current User
+                                    </h5>
+                                }
                             </div>
-
                         )
-                    )
+                    })
             }
 
         </div>
