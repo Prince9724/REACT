@@ -3,11 +3,12 @@ import axios from 'axios'//axios npm se install kr ke import kiya hai
 import { TaskApi } from '../utils/Api.js' //taskApi ek api url hai jise api.js me default export kiya hai 
 import Task from '../component/task.jsx'
 
-export const postTask =
-    createAsyncThunk("task/post",async (data) => {
-        const res =await axios.post( TaskApi,data)
-            return res.data//agar data sucesfull post ho rha hai yo res.data return ho jaayega. 
-        })
+export const postTask = createAsyncThunk("task/post", async (data) => {
+    console.log(data)
+    console.log("-----------------------")
+    const res = await axios.post(TaskApi, data)
+    return res.data//agar data sucesfull post ho rha hai yo res.data return ho jaayega. 
+})
 
 export const fetchTask = createAsyncThunk("task/get", async () => { //ex variable hai jisko named export kiya hai aur ek unic naam bhi diya hai 
     //yha pr keval data get hoga api url se data get hoga   
@@ -19,12 +20,14 @@ export const fetchTask = createAsyncThunk("task/get", async () => { //ex variabl
 //     return res.data;
 // })
 
-export const updateTask = createAsyncThunk("task/put", async ( task) => {
-    const res = await axios.put(TaskApi+""+task.id,task)
+export const updateTask = createAsyncThunk("task/put", async (task) => {
+    const res = await axios.put(TaskApi + "/" + task.id, task)
     return res.data
 })
-export const deleteTask = createAsyncThunk("task/delete", async ({ id }) => {
+export const deleteTask = createAsyncThunk("task/delete", async (id) => {
+    console.log(id)
     const res = await axios.delete(`${TaskApi}/${id}`)
+    console.log(res.status)
     return res.data;
 })
 const taskSLice = createSlice({
@@ -65,6 +68,13 @@ const taskSLice = createSlice({
             })
             .addCase(updateTask.fulfilled, (state, action) => {
                 state.isloading = "success.."
+                const index = state.tasks.findIndex(
+                    (tas) => tas.id === action.payload.id
+                )
+
+                if (index !== -1) {
+                    state.tasks[index] = action.payload
+                }
             })
             .addCase(updateTask.rejected, (state, action) => {
                 state.isloading = "failed"
@@ -74,6 +84,10 @@ const taskSLice = createSlice({
                 state.isloading = " loading..."
             })
             .addCase(deleteTask.fulfilled, (state, action) => {
+                console.log(action.payload)
+                const index = state.tasks.findIndex((tas) => tas.id == action.payload.id);
+                console.log(index)
+                state.tasks.splice(index, 1)
                 state.isloading = "success.."
             })
             .addCase(deleteTask.rejected, (state, action) => {

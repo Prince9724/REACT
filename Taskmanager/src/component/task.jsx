@@ -1,35 +1,44 @@
 import React, { useEffect, useState } from 'react'//usestate aur useeffect dono ko react se import kiya hai 
 import { useSelector, useDispatch } from 'react-redux'//useselector aur dispatch dono react-redux se import hua hai
 import { fetchTask, postTask, updateTask, deleteTask } from '../feature/TaskSlice.js'// inko slice se named export krke import kiya hai
-const Task = () => {//ek functon hai task 
+const Task = () => {//ek functon hai task
+
   const dispatch = useDispatch();//dispatch ke ander usedispatch ko store kiya taaki kahi pr bhi dispach use kr sku 
   const { tasks, isloading, error, message } = useSelector((state) => state.task);
   //ye hme state deta hai aur us state se hme ek ek task chahiye.
   const [manager, setmanager] = useState({});//ye maine usestate bnaaya hai aur iske throw maine data ko post kiya hai 
   const [filter, setfilter] = useState("");
+  const [checkedIds, setCheckedIds] = useState([])
+
+  const handleCheck = (id) => {
+    if (!checkedIds.includes(id)) {
+      setCheckedIds((prev) => [...prev, id])
+    }
+  }
   useEffect(() => {//useeffect ke ander dispatch ko call kiya hai 
     dispatch(fetchTask());//dispatch me fetchtask ko call kiya hai 
   }, [])
-  const handleAdd = async () => {//handleAdd ek function bnaya hai jiske ander maine button click ka feature add kiya hai 
+
+  const handleAdd = () => {//handleAdd ek function bnaya hai jiske ander maine button click ka feature add kiya hai 
     if (
       !manager.title ||//agar title aur desctription fill nahi hai to usko ek ek alert box dikhega 
       !manager.description
     ) {
       return alert("Fill all fields")//agar input dono khaali hai to user ko ye allert box dikhega 
     }
-     if (manager.id) {
-    
-          await dispatch(updateTodo(manager))
-    
-        } else {
-    
-          await dispatch(addTodo(manager))
-    
-        }
-    dispatch(postTask(manager))//button click hote hi api ke ander jo task hai vo post h jaayega 
-    console.log("helo")
+
+    if (manager.id) {
+
+      dispatch(updateTask(manager))
+
+    } else {
+
+      dispatch(postTask(manager))
+    }
+    console.log("---------<<<")
+    dispatch(fetchTask())
+    // dispatch(postTask(manager))//button click hote hi api ke ander jo task hai vo post h jaayega 
     setmanager({
-      
       title: "",
       description: "",
       priority: "low",
@@ -42,8 +51,10 @@ const Task = () => {//ek functon hai task
   //todo -> edit click krne pr old data input me  aana chahiye user kuch change krega aur fir jab update krega to api call hona chahiye 
   //redux state update uske badd ui change ho jaaana chahiye 
   const handleEdit = (task) => {
+    console.log(task)
     setmanager(task)
   }
+
   return (
     <div className='container d-flex flex-column align-items-center justify-content-center'>
       <div className='box pt-5 d-flex  gap-3 '>
@@ -66,6 +77,10 @@ const Task = () => {//ek functon hai task
         </select>
         <button className='btn btn-outline-secondary' onClick={handleAdd}>  {manager.id ? "Update" : "Add"}</button>
         {/* <button className='btn btn-outline-secondary' onClick={handleUpdate}>update</button> */}
+
+      </div>
+      <div className='mt-5'>
+        <input type="text" />
         <select
           className="form-select" value={filter} onChange={(e) => setfilter(e.target.value)}>
           <option value="">ALL</option>
@@ -75,6 +90,7 @@ const Task = () => {//ek functon hai task
         </select>
       </div>
       <div className='w-100 d-flex flex-wrap justify-content-center'>
+
         {
           tasks?.filter((task) =>
             filter === "" ? true : task.priority === filter
@@ -91,12 +107,14 @@ const Task = () => {//ek functon hai task
                     handleEdit(task)
                   }}>Edit</button>
                   <button onClick={() => {
-                    dispatch(deleteTask({
-                      id: task.id
-                    }))
+                    dispatch(deleteTask(task.id))
                     dispatch(fetchTask())
                   }} className='btn btn-outline-danger'>Delete</button>
+
                 </div>
+                <input type="checkbox" checked={checkedIds.includes(task.id)}
+                  disabled={checkedIds.includes(task.id)}
+                  onChange={() => handleCheck(task.id)} />
               </div>
 
             ))

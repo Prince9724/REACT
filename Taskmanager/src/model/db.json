@@ -4,27 +4,14 @@
       "title": "hello ",
       "description": "world",
       "priority": "low",
-      "status": "pending",
       "id": 1
     },
     {
-      "title": "hello ",
-      "description": "workout at 5pm",
-      "priority": "low",
-      "id": 4
-    },
-    {
-      "title": "hello ",
-      "description": "here i am",
+      "title": "helo ",
+      "description": "hello",
       "priority": "high",
       "status": "pending",
-      "id": 5
-    },
-    {
-      "title": "heello",
-      "description": "dh",
-      "priority": "medium",
-      "id": 6
+      "id": 2
     }
   ]
 }
