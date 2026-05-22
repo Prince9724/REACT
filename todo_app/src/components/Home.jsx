@@ -31,8 +31,8 @@ const Home = () => {
   const handleSubmit = async () => {
 
     if (
-      todo.title.trim() === "" ||
-      todo.description.trim() === ""
+      todo.title  === "" ||
+      todo.description  === ""
     ) {
       alert("Please fill both fields")
       return
