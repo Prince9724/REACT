@@ -88,7 +88,7 @@ const Task = () => {//ek functon hai task
 
 export default Task // default export kiya hai 
 
-
+//todo summary 
 ///id + tod important hai
 //only id in delete
 //api -thunk - return - action- action.payload -> state,todos (initialstate ka data hai )
