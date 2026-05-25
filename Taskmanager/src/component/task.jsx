@@ -155,6 +155,10 @@ export default Task // default export kiya hai
 //action ==> action ek object hota hai jo btata hai ki state me kya krna hai.
 //  MVC == modern view controller 
 // json => javascript object notation.. 
-
+//redux me async ko handle krna muskil hota tha isliye reduxtoolkit ne create asyncThunk diya 
+//create async thunk me action ko  handel krne ke liye exrareducer ka use hota hai 
+// builder ek helpper object hota hai isase ham alag alg casses ko handle krte hai 
+//reducer ==>  reducr ek function hota hai jo curent data aur action ko update krke new updated data return krta hai.
+//   
 
 
