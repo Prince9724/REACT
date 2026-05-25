@@ -153,7 +153,8 @@ export default Task // default export kiya hai
 //slice ==> slice redux toolkit ka ek part hota hai jo state reducer action ko ek hi jagah define krta hai.
 //slice ==> state ka chhota part + uska logic + uska action.
 //action ==> action ek object hota hai jo btata hai ki state me kya krna hai.
-//  
+//  MVC == modern view controller 
+// json => javascript object notation.. 
 
 
 
