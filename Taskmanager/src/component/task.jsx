@@ -135,4 +135,14 @@ export default Task // default export kiya hai
 // const index= state.todo.findindex((todo))=> todo.id == id );isko return krke index name ki variabvle ke ander store kr rhe hai
 //state.todos[index]= action.payload;
 // ye update ho jaayega 
-
+//jsx ==> html aur javascript ke code ko ek sath likhne ki facility deta hai.
+//virtual dom => page ko reload nahi krta hai sirf ipdate form ko hi update krta hai  
+// ek component ko multipal jgah use kr skte hai.
+//react ek javascript library hai jo fast aur reusable user interface bnaane ke liye use hotti hai.
+//react ek javascript library hai jo user interface bnaane ke liye use hota hai isme ham reusable component bnate hai.
+// ==> hook react ka special function hota hai jo fuvnction component ko react ki faci;lity provide krta hai 
+// aplicaion programing interface ==> API
+//axios => axios ka use ham api calling ke liye krte hai.
+// axios axios se import hota hai 
+//
+    
