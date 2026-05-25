@@ -144,5 +144,16 @@ export default Task // default export kiya hai
 // aplicaion programing interface ==> API
 //axios => axios ka use ham api calling ke liye krte hai.
 // axios axios se import hota hai 
-//
-    
+//isme ham post get delete put patch ka use kr ke api ko handle krte hai.
+
+///***********RTK********* */
+
+// redux toolkit ek tool hia jo app ke data ko manage krta hai code ko short aur easy bna deta hai.
+//redux toolkit ek modern tooll hai jo refux ko simple fast aur esasy bna deta hai with less code.
+//slice ==> slice redux toolkit ka ek part hota hai jo state reducer action ko ek hi jagah define krta hai.
+//slice ==> state ka chhota part + uska logic + uska action.
+//action ==> action ek object hota hai jo btata hai ki state me kya krna hai.
+//  
+
+
+
