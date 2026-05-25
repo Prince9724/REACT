@@ -159,6 +159,8 @@ export default Task // default export kiya hai
 //create async thunk me action ko  handel krne ke liye exrareducer ka use hota hai 
 // builder ek helpper object hota hai isase ham alag alg casses ko handle krte hai 
 //reducer ==>  reducr ek function hota hai jo curent data aur action ko update krke new updated data return krta hai.
-//   
+//   usecontext ==>  parrent child ke flow me data ko bina component ke use kiye parrent se child ke paass pahucha deta hai. 
+// server == server vo hota hai jo request accept krta hai aur response bhejta hai..
+// 
 
 
