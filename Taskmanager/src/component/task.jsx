@@ -139,11 +139,11 @@ export default Task // default export kiya hai
 
 
 //jsx ==> html aur javascript ke code ko ek sath likhne ki facility deta hai.
-//virtual dom => page ko reload nahi krta hai sirf ipdate form ko hi update krta hai  
+//virtual dom => page ko reload nahi krta hai sirf changes part ko hi update krta hai  
 // ek component ko multipal jgah use kr skte hai.
 //react ek javascript library hai jo fast aur reusable user interface bnaane ke liye use hotti hai.
 //react ek javascript library hai jo user interface bnaane ke liye use hota hai isme ham reusable component bnate hai.
-// ==> hook react ka special function hota hai jo fuvnction component ko react ki faci;lity provide krta hai 
+// ==> hook react ka special function hota hai jo functional component ko react ki facility provide krta hai 
 // aplicaion programing interface ==> API
 //axios => axios ka use ham api calling ke liye krte hai.
 // axios axios se import hota hai 
@@ -151,8 +151,8 @@ export default Task // default export kiya hai
 
 ///***********RTK********* */
 
-// redux toolkit ek tool hia jo app ke data ko manage krta hai code ko short aur easy bna deta hai.
-//redux toolkit ek modern tooll hai jo refux ko simple fast aur esasy bna deta hai with less code.
+// redux toolkit ek tool hai jo app ke data ko manage krta hai code ko short aur easy bna deta hai.
+//redux toolkit ek modern tooll hai jo react ko simple fast aur esasy bna deta hai with less code.
 //slice ==> slice redux toolkit ka ek part hota hai jo state reducer action ko ek hi jagah define krta hai.
 //slice ==> state ka chhota part + uska logic + uska action.
 //action ==> action ek object hota hai jo btata hai ki state me kya krna hai.
