@@ -135,6 +135,9 @@ export default Task // default export kiya hai
 // const index= state.todo.findindex((todo))=> todo.id == id );isko return krke index name ki variabvle ke ander store kr rhe hai
 //state.todos[index]= action.payload;
 // ye update ho jaayega 
+
+
+
 //jsx ==> html aur javascript ke code ko ek sath likhne ki facility deta hai.
 //virtual dom => page ko reload nahi krta hai sirf ipdate form ko hi update krta hai  
 // ek component ko multipal jgah use kr skte hai.
@@ -162,6 +165,6 @@ export default Task // default export kiya hai
 //   usecontext ==>  parrent child ke flow me data ko bina component ke use kiye parrent se child ke paass pahucha deta hai. 
 // server == server vo hota hai jo request accept krta hai aur response bhejta hai..
 // reducer ==> ye ek object hota hia jo dir changes part ko hi update krta hai.
- 
+
 
 
