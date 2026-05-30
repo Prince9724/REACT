@@ -33,29 +33,57 @@ useNavigate
 React Router
 
 
-
 Yeh ek web-based system hai jo restaurant ke kaam ko digital banata hai.
 
 Waiter / Employee orders le sakta hai, bill bana sakta hai, order modify kar sakta hai.
 
 Manager sab kuch dekh sakta hai – employees, menu, sales reports, aur control bhi.
 
-Automatic GST, service charge, discount calculate hota hai.
-
+ Automatic GST, service charge, discount calculate hota hai.
 Invoice print ya PDF download ho sakti hai.
-
-Dashboard me daily/weekly/monthly sales, top dishes, employee performance sab dikhta hai.
-
-
-
-1. 🧑‍🍳 Employee / Waiter Panel – waiter kya kar sakta hai?
-Naya order lena – customer ke liye menu se items add karna.
-
-Bill calculate karna – total + GST + service charge + discount auto calculate.
-
-Order modify karna – items add/remove kar sakte hain, quantity badha/ghata sakte hain.
-
-Order status change – Pending, In Progress, Served, Completed.
-
+ Dashboard me daily/weekly/monthly sales, top dishes, employee performance sab dikhta hai.
+ 1. 🧑‍🍳 Employee / Waiter Panel – waiter kya kar sakta hai?
+ Naya order lena – customer ke liye menu se items add karna.
+ Bill calculate karna – total + GST + service charge + discount auto calculate.
+ Order modify karna – items add/remove kar sakte hain, quantity badha/ghata sakte hain.
+ Order status change – Pending, In Progress, Served, Completed.
 Apni sales history dekhna – kitne orders liye, kitni sale ki.
+
+
+
+2. 👨‍💼 Manager / Admin Panel – manager kya kar sakta hai?
+Dashboard – ek page par sab kuch dikhta hai:
+Total employees
+Total orders
+Total sales (daily/weekly/monthly)
+Top-selling dishes
+Total collection
+Employee manage karna (CRUD) – naya employee add karo, edit karo, delete karo.
+(name, role, contact, salary, login password)
+Employee performance track karna – kisne kitne orders liye, kitni sale ki.
+Menu manage karna – dish add/edit/delete, price, category, tax rate, availability on/off.
+
+
+3. 🍛 Order Management – order kaise handle hoga?
+Order creation – walk-in guest ya existing customer.
+Items add karna – multiple items, quantity, price, tax auto lagta.
+Bill real-time calculate – subtotal + tax = total.
+Discount apply kar sakte hain.
+Order modify – final checkout se pehle kuch bhi change kar sakte hain (add/remove/quantity badhao).
+Billing & Invoice –
+Invoice me restaurant name, customer name, table number, date, time, order ID, items list, total GST, service charge, payment method.
+Print ya PDF download.
+Invoice history store hoti hai.
+
+
+isme mujhe table ko wetter ke hisab se sab me baat deni hai like that 12 table hai aur 4 wetter hai 
+ek ek 3 table baat deni hai agr koi wetter chhutti pr hai to 3 water ko jo wetter chhuti pr hai uski 
+table ko handle krna pdega 
+aur ek wetter ek din me kitna order leta hai usko record dikhna chahiye aur manager ko bhi dikhega 
+
+
+db.json aur modal.jsx -> comon-> components
+
+Manager: manager@resto.com / 123
+Waiter: waiter@resto.com / 123
 
