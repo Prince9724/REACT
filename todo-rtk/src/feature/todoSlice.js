@@ -14,4 +14,4 @@ const TodoSlice = createSlice({
 })
 export const {addTodo, removeTodo,updateTodo} = TodoSlice.actions;
 export default TodoSlice.reducer;//todoSlice dafault export ho rha hai. isko store me kisi bhi naam se import kr skte hai 
-  
+   
