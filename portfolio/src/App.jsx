@@ -4,7 +4,7 @@ import Hero from "./component/hero/Hero";
 import Education from "./component/education/Education";
 import Skill from "./component/skill/Skill";
 import Project from "./component/projects/Project";
-import Contact from "./component/Contact/Contact.jsx";
+import Contact from "./component/contact/Contact.jsx";
 import Footer from "./component/footer/Footer";
 import "./App.css";
 
