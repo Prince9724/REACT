@@ -1,88 +1,198 @@
-
 import React, { useState } from 'react'
+import { FiUser, FiMail, FiMessageSquare, FiPhone, FiMapPin, FiSend, FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi'
 import "./Contact.css"
- 
+
 const Contact = () => {
-    const [use, setuse]= useState("");
-    const[email, setemail] = useState("");
-    const [massage, setmassage] = useState("");
-    const clear =()=>{
-        setuse("");
-        setemail("");
-        setmassage("");
-        alert("your details is send !!")
-    }
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState({ type: '', message: '' });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setStatus({ type: '', message: '' });
+
+        try {
+            const response = await fetch('http://localhost:5000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setStatus({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' });
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+            }
+        } catch (error) {
+            setStatus({ type: 'error', message: 'Network error. Please try again.' });
+        } finally {
+            setLoading(false);
+            setTimeout(() => {
+                setStatus({ type: '', message: '' });
+            }, 5000);
+        }
+    };
+
     return (
-        <div id='contact' className='contact-box container-fluid p-5'>
-
-            <h3 className='text-center'>Contact</h3>
-            <div className='container d-flex flex-wrap w-100 justify-content-around mt-5'>
-                <div>
-                    <h1>
-                        Prince Gond
-                    </h1>
-                    <h3>Full stack web developer </h3>
-                    <h4>contact no. 9724672317</h4>
-                    <p><a href="">princegondrw123@gmail.com</a></p>
+        <section id='contact' className="contact-section">
+            <div className="container">
+                <div className="contact-header">
+                    <span className="contact-badge">Get In Touch</span>
+                    <h2>Contact Me</h2>
+                    <div className="contact-line"></div>
+                    <p className="contact-subtitle">
+                        Have a project in mind? Let's work together!
+                    </p>
                 </div>
-                <div className='send-box'>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">
-                            Your Name
-                        </label>
 
-                        <input
-                            type="text"
-                            className="form-control"
-                            aria-describedby="emailHelp"
-                            placeholder='Your Name'
-                            value={use}
-                            onChange={(e)=>{
-                                setuse(e.target.value)
-                            }}
-                        />
+                <div className="contact-wrapper">
+                    {/* Left Side - Contact Info */}
+                    <div className="contact-info">
+                        <div className="info-card">
+                            <div className="info-icon">
+                                <FiUser />
+                            </div>
+                            <div className="info-content">
+                                <h4>Name</h4>
+                                <p>Prince Gond</p>
+                            </div>
+                        </div>
 
+                        <div className="info-card">
+                            <div className="info-icon">
+                                <FiMail />
+                            </div>
+                            <div className="info-content">
+                                <h4>Email</h4>
+                                <p>princegondrw123@gmail.com</p>
+                            </div>
+                        </div>
 
-                    </div>
+                        <div className="info-card">
+                            <div className="info-icon">
+                                <FiPhone />
+                            </div>
+                            <div className="info-content">
+                                <h4>Phone</h4>
+                                <p>+91 9724672317</p>
+                            </div>
+                        </div>
 
-                    <div className=" mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">
-                            Email address
-                        </label>
+                        <div className="info-card">
+                            <div className="info-icon">
+                                <FiMapPin />
+                            </div>
+                            <div className="info-content">
+                                <h4>Location</h4>
+                                <p>India</p>
+                            </div>
+                        </div>
 
-
-                        <input
-                            type="email"
-                            className="form-control"
-                            id="exampleInputPassword1"
-                            placeholder='Your email'
-                            value={email}
-                            onChange={(e)=> setemail(e.target.value)}
-                        />
-                        <div id="emailHelp" className="form-text text-white">
-                            We'll never share your email with anyone else.
+                        <div className="social-links-contact">
+                            <h4>Follow Me</h4>
+                            <div className="social-icons">
+                                <a href="https://github.com/Prince9724" target="_blank" rel="noopener noreferrer">
+                                    <FiGithub />
+                                </a>
+                                <a href="https://www.linkedin.com/in/prince-gond-69090b375/" target="_blank" rel="noopener noreferrer">
+                                    <FiLinkedin />
+                                </a>
+                                <a href="https://www.instagram.com/lion_prince_001/" target="_blank" rel="noopener noreferrer">
+                                    <FiInstagram />
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="mb-3 form-check">
-                        <div class="form-floating">
-                            <textarea className="form-control"
-                            value={massage}
-                            onChange={(e)=> setmassage(e.target.value)}
-                            placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">Send massage </label>
-                        </div>
-                    </div>
+                    {/* Right Side - Contact Form */}
+                    <div className="contact-form-wrapper">
+                        {status.message && (
+                            <div className={`alert ${status.type}`}>
+                                {status.message}
+                            </div>
+                        )}
+                        
+                        <form onSubmit={handleSubmit}>
+                            <div className="form-group">
+                                <label htmlFor="name">
+                                    <FiUser />
+                                    Your Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
 
-                    <button type="submit"  onClick={clear} className="btn btn-primary">
-                        Send 
-                    </button>
+                            <div className="form-group">
+                                <label htmlFor="email">
+                                    <FiMail />
+                                    Email Address
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="message">
+                                    <FiMessageSquare />
+                                    Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Write your message here..."
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" className="submit-btn" disabled={loading}>
+                                {loading ? (
+                                    <>Sending...</>
+                                ) : (
+                                    <>
+                                        <FiSend />
+                                        Send Message
+                                    </>
+                                )}
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-
-
-        </div>
+        </section>
     )
 }
 

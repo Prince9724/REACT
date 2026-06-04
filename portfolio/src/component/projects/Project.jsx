@@ -4,6 +4,48 @@ import "./Project.css"
 const Project = () => {
     const projects = [
         {
+            id:110,
+            title:"Restorant Managment System",
+            description:"restorant managment system (POS)system"
+        },
+        {
+            id:111,
+            title:"HRMS",
+            description:"Human Resource Managment System",
+            image:"https://i.pinimg.com/1200x/07/65/8c/07658c342a69ea28744a755f8ecc1f94.jpg",
+            github:"https://github.com/Prince9724/REACT-HRMS/tree/main/HRMS",
+            tech:"React,rtk,json-server,axios"
+        },
+        {
+            id:112,
+            title:"Ecomerce",
+            description:"Eccomerce plateform",
+            image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZZQRiMVYsZC6eeEkEKL37WOFibFgG0i7Dfw&s",
+            github:"https://github.com/Prince9724/REACT/tree/main/eccomerce",
+            tech:"React.js, Bootstrap, REST API, Local Storage"
+        },
+        {
+            id:113,
+            title:"Twitter clone",
+            description:"Twitter clone",
+            image:"https://s3.india.com/wp-content/uploads/2019/07/Twitter-New-Interface.jpg",
+            github:"https://github.com/Prince9724/REACT/tree/main/twitter",
+            tech:"React.js, Bootstrap, JSON Server"
+        },
+        // {
+        //     id:114,
+        //     title:
+        // }
+        ,
+         {
+            id: 7,
+            title: "Utils Text",
+            description: "Text Utils app to edit, format, and analyze text quickly with useful tools.",
+            image: "https://user-images.githubusercontent.com/79099734/189593798-94357cb9-40ec-45e1-a9ae-78c364a0780f.png",
+            github: "https://github.com/Prince9724/REACT/tree/main/03-utils-text",
+            tech: "React.js"
+        },
+        {
             id: 1,
             title: "Quiz App",
             description: "Interactive quiz app to test knowledge with multiple questions, instant feedback, score tracking, and fun learning.",
@@ -51,14 +93,7 @@ const Project = () => {
             github: "https://prince9724.github.io/portfolio/",
             tech: "HTML, CSS, JavaScript"
         },
-        {
-            id: 7,
-            title: "Utils Text",
-            description: "Text Utils app to edit, format, and analyze text quickly with useful tools.",
-            image: "https://user-images.githubusercontent.com/79099734/189593798-94357cb9-40ec-45e1-a9ae-78c364a0780f.png",
-            github: "https://github.com/Prince9724/REACT/tree/main/03-utils-text",
-            tech: "React.js"
-        }
+       
     ];
 
     return (
