@@ -6,7 +6,10 @@ const Project = () => {
         {
             id:110,
             title:"Restorant Managment System",
-            description:"restorant managment system (POS)system"
+            description:"restorant managment system (POS)system",
+            image:"https://mir-s3-cdn-cf.behance.net/projects/404/657695235861073.Y3JvcCwzMDY4LDI0MDAsNDUsMA.jpg",
+            github:"https://github.com/Prince9724/REACT-HRMS/tree/main/RestroDesk",
+            tech:"React.js, Redux Toolkit, Talwind, JSON Server,Ai Assistance"
         },
         {
             id:111,
@@ -14,7 +17,7 @@ const Project = () => {
             description:"Human Resource Managment System",
             image:"https://i.pinimg.com/1200x/07/65/8c/07658c342a69ea28744a755f8ecc1f94.jpg",
             github:"https://github.com/Prince9724/REACT-HRMS/tree/main/HRMS",
-            tech:"React,rtk,json-server,axios"
+            tech:"React,rtk,json-server,axios Ai Assistance"
         },
         {
             id:112,

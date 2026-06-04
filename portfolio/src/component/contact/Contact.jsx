@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import emailjs from '@emailjs/browser';
 import { FiUser, FiMail, FiMessageSquare, FiPhone, FiMapPin, FiSend, FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi'
 import "./Contact.css"
 
@@ -21,33 +22,38 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        setStatus({ type: '', message: '' });
 
         try {
-            const response = await fetch('http://localhost:5000/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
+            await emailjs.send(
+                "YOUR_SERVICE_ID",
+                "YOUR_TEMPLATE_ID",
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    message: formData.message,
                 },
-                body: JSON.stringify(formData)
+                "YOUR_PUBLIC_KEY"
+            );
+
+            setStatus({
+                type: "success",
+                message: "Message sent successfully!"
             });
 
-            const data = await response.json();
+            setFormData({
+                name: "",
+                email: "",
+                message: ""
+            });
 
-            if (data.success) {
-                setStatus({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' });
-                setFormData({ name: "", email: "", message: "" });
-            } else {
-                setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
-            }
         } catch (error) {
-            setStatus({ type: 'error', message: 'Network error. Please try again.' });
-        } finally {
-            setLoading(false);
-            setTimeout(() => {
-                setStatus({ type: '', message: '' });
-            }, 5000);
+            setStatus({
+                type: "error",
+                message: "Failed to send message."
+            });
         }
+
+        setLoading(false);
     };
 
     return (
@@ -114,7 +120,7 @@ const Contact = () => {
                                 <a href="https://www.linkedin.com/in/prince-gond-69090b375/" target="_blank" rel="noopener noreferrer">
                                     <FiLinkedin />
                                 </a>
-                                <a href="https://www.instagram.com/lion_prince_001/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com/prince.web__001/" target="_blank" rel="noopener noreferrer">
                                     <FiInstagram />
                                 </a>
                             </div>
@@ -128,7 +134,7 @@ const Contact = () => {
                                 {status.message}
                             </div>
                         )}
-                        
+
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="name">

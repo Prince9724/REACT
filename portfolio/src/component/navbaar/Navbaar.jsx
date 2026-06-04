@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiHome, FiBookOpen, FiCpu, FiFolder, FiMail, FiDownload, FiSun, FiMoon } from 'react-icons/fi';
+import { FiHome, FiBookOpen, FiCpu, FiFolder, FiMail, FiSun, FiMoon } from 'react-icons/fi';
 import "../navbaar/Navbaar.css";
 
 const Navbaar = ({ toggleTheme, theme }) => {
@@ -61,24 +61,16 @@ const Navbaar = ({ toggleTheme, theme }) => {
                         </button>
                     </div>
 
-                    {/* Right Side Actions */}
+                    {/* Right Side Actions - Only Theme Toggle Now */}
                     <div className="nav-actions">
                         {/* Theme Toggle Button */}
                         <button 
                             className="theme-toggle" 
                             onClick={toggleTheme}
                             aria-label="Toggle theme"
+                            title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                         >
                             {theme === 'dark' ? <FiSun /> : <FiMoon />}
-                        </button>
-
-                        {/* Resume Button */}
-                        <button 
-                            className="resume-btn"
-                            onClick={() => window.open('#', '_blank')}
-                        >
-                            Resume
-                            <FiDownload />
                         </button>
 
                         {/* Mobile Menu Toggle */}
@@ -98,4 +90,4 @@ const Navbaar = ({ toggleTheme, theme }) => {
     );
 };
 
-export default Navbaar;
+export default Navbaar; 

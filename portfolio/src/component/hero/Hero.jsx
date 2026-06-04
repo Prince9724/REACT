@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
 
           <div className="social-links">
-            <a href="https://www.instagram.com/lion_prince_001/" target="_blank">
+            <a href="https://www.instagram.com/prince.web__001/" target="_blank">
               <i className="ri-instagram-line"></i>
             </a>
 

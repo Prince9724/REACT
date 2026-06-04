@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiBook, FiCode, FiCalendar, FiAward, FiCpu, FiDatabase, FiLayout, FiZap } from 'react-icons/fi';
+import { FiBook, FiCode, FiCalendar, FiAward, FiCpu, FiDatabase, FiLayout, FiZap, FiServer } from 'react-icons/fi';
 import "./Education.css";
 
 const Education = () => {
@@ -10,15 +10,15 @@ const Education = () => {
             title: "Higher Secondary Education (12th)",
             year: "2022 - 2024",
             description: "Completed my higher secondary education and discovered a strong interest in web technologies and programming.",
-            achievements: ["Science Stream", "Computer Science", "87% Aggregate"]
+            achievements: ["Science Stream", "Computer Science"]
         },
         {
             id: 2,
             icon: FiCode,
-            title: "Self-Learning Journey in Web Development",
+            title: "Full Stack Web Development Course",
             year: "2024 - Present",
-            description: "Started learning Frontend Web Development after 12th. I focus on building responsive and modern user interfaces using modern technologies.",
-            achievements: ["HTML/CSS", "JavaScript", "Bootstrap", "React.js"]
+            description: "Currently learning Full Stack Web Development from Red & White Institute, Dindoli, Surat. Building modern web applications with industry-ready skills.",
+            achievements: ["React.js", "JavaScript", "Next.js", "Node.js (Learning)"]
         }
     ];
 
@@ -26,8 +26,9 @@ const Education = () => {
     const getAchievementIcon = (achievement) => {
         if (achievement.includes("Science")) return <FiCpu />;
         if (achievement.includes("Computer")) return <FiDatabase />;
-        if (achievement.includes("HTML") || achievement.includes("CSS")) return <FiLayout />;
         if (achievement.includes("React")) return <FiZap />;
+        if (achievement.includes("Next")) return <FiLayout />;
+        if (achievement.includes("Node")) return <FiServer />;
         return <FiAward />;
     };
 
