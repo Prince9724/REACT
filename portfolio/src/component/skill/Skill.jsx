@@ -1,40 +1,44 @@
 import React from 'react'
 import "./skill.css"
 
-
 const Skill = () => {
     return (
-        <div id='skill' className='hero container-fluide'>
-            <div className='mt-4 container col-10 text-center d-flex flex-column align-items-center'>
-                <h3 className=''>Skill</h3>
-                <div className=' mt-3 d-flex justify-content-center flex-wrap gap-3'>
-                    <div style={{ height: 50, width: 200 }} className='skill-box'>
-                        <h4 className='skill'>c</h4>
+        <div id='skill' className='skills-section'>
+            <div className='skills-container'>
+                <div className='skills-header'>
+                    <span className='skills-badge'>My Expertise</span>
+                    <h3 className='skills-title'>Skills</h3>
+                    <div className='skills-line'></div>
+                </div>
+                
+                <div className='skills-grid'>
+                    <div className='skill-box'>
+                        <h4>C</h4>
                     </div>
-                    <div style={{ height: 50, width: 200 }} className='skill-box '>
-                        <h4 className='skill'>Html</h4>
+                    <div className='skill-box'>
+                        <h4>HTML</h4>
                     </div>
-                    <div style={{ height: 50, width: 200 }} className=' skill-box '>
-                        <h4 className='skill'>CSS</h4>
+                    <div className='skill-box'>
+                        <h4>CSS</h4>
                     </div>
-                    <div style={{ height: 50, width: 200 }} className='skill-box '>
-                        <h4 className='skill'> Bootstrap</h4>
+                    <div className='skill-box'>
+                        <h4>Bootstrap</h4>
                     </div>
-                    <div style={{ height: 50, width: 200 }} className='skill-box y'>
-                        <h4 className='skill'>Mediya Query</h4>
+                    <div className='skill-box'>
+                        <h4>Media Query</h4>
                     </div>
-                    <div style={{ height: 50, width: 200 }} className='skill-box '>
-                        <h4 className='skill'>JavaScript</h4>
+                    <div className='skill-box'>
+                        <h4>JavaScript</h4>
                     </div>
-                    <div style={{ height: 50, width: 200 }} className='skill-box '>
-                        <h4 className='skill'>React</h4>
+                    <div className='skill-box'>
+                        <h4>React</h4>
                     </div>
-                    <div style={{ height: 50, width: 200 }} className='skill-box '>
-                        <h4 className='skill'>Talwind</h4>
+                    <div className='skill-box'>
+                        <h4>Tailwind</h4>
                     </div>
                 </div>
-                <hr className='bg-primary mt-5 w-100' style={{ height: 3 }} />
-                 
+                
+                <hr className='skills-hr' />
             </div>
         </div>
     )
