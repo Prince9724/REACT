@@ -16,8 +16,11 @@ const Home = () => {
         alert("note post succefully !!");
         handlefetchuser();
     }
+    const deletNotes =async ()=>{
+        
+    }
     return (
-        <div className='container'>
+        <div className='container border border-3 bg-info d-flex justify-content-center flex-column align-items-center w-100 '>
             <div>
                 <input type="text" onChange={(e) => setdata({ ...data, title: e.target.value })} placeholder='notes' />
                 <input type="text" onChange={(e) => setdata({ ...data, description: e.target.value })} placeholder='description' />
@@ -28,10 +31,10 @@ const Home = () => {
                 }} >Add</button>
             </div>
             Home
-            <div className='d-flex flex-wrap gap-4'>
+            <div className='d-flex flex-wrap gap-4 w-100 justify-content-center '>
                 {
                     posts.map((post) => {
-                        return <div className='border border-2 p-3 w-25'>
+                        return <div className='card border border-2 p-3'>
                                  <div>
                                     <p key={post.id}>{post.title}</p>
                                  </div>
