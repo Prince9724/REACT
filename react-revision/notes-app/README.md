@@ -1,3 +1,12 @@
+OUTPUT ::
+
+https://github.com/user-attachments/assets/8c10f57e-23fd-482c-a700-785cb8e94166
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
