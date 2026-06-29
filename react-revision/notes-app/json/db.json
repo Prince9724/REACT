@@ -13,12 +13,6 @@
       "id": 8
     },
     {
-      "title": "Spotify Integration",
-      "description": " Share your current vibe with an active \"Now Playing\" status on your profile",
-      "color": "#ff961",
-      "id": 10
-    },
-    {
       "description": " Share your current vibe with an active \"Now Playing\" status on your profile",
       "title": "spotify",
       "color": "#6cc9a5",
@@ -41,12 +35,6 @@
       "description": " A dedicated space to quickly empty your mind of all passing thoughts, worries, and ideas without worrying about formatting.",
       "color": "#26ccbc",
       "id": 14
-    },
-    {
-      "title": "helllo ",
-      "description": "everybody",
-      "color": "#7d3a23",
-      "id": 15
     }
   ]
 }
